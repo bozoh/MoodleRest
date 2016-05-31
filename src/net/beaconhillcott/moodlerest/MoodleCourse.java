@@ -772,4 +772,21 @@ public class MoodleCourse implements Serializable {
     public Long getEnrolledUserCount() {
       return enrolledusercount;
     }
+
+	@Override
+	public String toString() {
+		return "MoodleCourse [id=" + id + ", shortname=" + shortname + ", fullname=" + fullname + ", categoryid="
+				+ categoryid + ", summaryformat=" + summaryformat + ", format=" + format + ", showgrades=" + showgrades
+				+ ", newsitems=" + newsitems + ", numsections=" + numsections + ", maxbytes=" + maxbytes
+				+ ", showreports=" + showreports + ", hiddensections=" + hiddensections + ", groupmode=" + groupmode
+				+ ", groupmodeforce=" + groupmodeforce + ", defaultgroupingid=" + defaultgroupingid
+				+ ", enablecompletion=" + enablecompletion + ", completionstartonenrol=" + completionstartonenrol
+				+ ", completionnotify=" + completionnotify + ", visible=" + visible + ", categorysortorder="
+				+ categorysortorder + ", timecreated=" + timecreated + ", timemodified=" + timemodified + ", summary="
+				+ summary + ", idnumber=" + idnumber + ", lang=" + lang + ", forcetheme=" + forcetheme + ", startdate="
+				+ startdate + ", enrolledusercount=" + enrolledusercount + ", courseformatoptions="
+				+ courseformatoptions + "]";
+	}
+    
+    
 }

@@ -15,10 +15,10 @@ public class MoodleRestSample {
 		String url = "http://localhost/doutrina-moodle";
 
 		MoodleCallRestWebService.init(url, token);
-		MoodleCallRestWebService.setDebug(true);
+		MoodleCallRestWebService.setDebug(false);
 		MoodleCourse[] courses = MoodleRestCourse.getAllCourses();
 		for (int i = 0; i < courses.length; i++) {
-			System.out.println(courses[i].getFullname() + " - " + courses[i].getShortname());
+			System.out.println(courses.toString());
 		}
 	}
 }
