@@ -27,11 +27,16 @@ import java.util.ArrayList;
  * <p>For Moodle course creation a minimum of attributes shortname, fullname and categoryid have to be set programatically, other required attributes are set to default values found in Moodle, change as appropriate using setter methods before a call for course creation.</p>
  * @see MoodleRestCourse
  * @author Bill Antonia
+ * @author carlosalexandre
  *
  */
-public class MoodleCourse implements Serializable {
+public class MoodleCourse implements Serializable, Comparable<MoodleCourse> {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4858770441492634631L;
+	/**
      *
      */
     public static final int SUMMARY_FORMAT_NO = 0;
@@ -773,19 +778,233 @@ public class MoodleCourse implements Serializable {
       return enrolledusercount;
     }
 
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
-		return "MoodleCourse [id=" + id + ", shortname=" + shortname + ", fullname=" + fullname + ", categoryid="
-				+ categoryid + ", summaryformat=" + summaryformat + ", format=" + format + ", showgrades=" + showgrades
-				+ ", newsitems=" + newsitems + ", numsections=" + numsections + ", maxbytes=" + maxbytes
-				+ ", showreports=" + showreports + ", hiddensections=" + hiddensections + ", groupmode=" + groupmode
-				+ ", groupmodeforce=" + groupmodeforce + ", defaultgroupingid=" + defaultgroupingid
-				+ ", enablecompletion=" + enablecompletion + ", completionstartonenrol=" + completionstartonenrol
-				+ ", completionnotify=" + completionnotify + ", visible=" + visible + ", categorysortorder="
-				+ categorysortorder + ", timecreated=" + timecreated + ", timemodified=" + timemodified + ", summary="
-				+ summary + ", idnumber=" + idnumber + ", lang=" + lang + ", forcetheme=" + forcetheme + ", startdate="
-				+ startdate + ", enrolledusercount=" + enrolledusercount + ", courseformatoptions="
-				+ courseformatoptions + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("MoodleCourse [id=").append(id).append(", shortname=").append(shortname).append(", fullname=")
+				.append(fullname).append(", categoryid=").append(categoryid).append(", summaryformat=")
+				.append(summaryformat).append(", format=").append(format).append(", showgrades=").append(showgrades)
+				.append(", newsitems=").append(newsitems).append(", numsections=").append(numsections)
+				.append(", maxbytes=").append(maxbytes).append(", showreports=").append(showreports)
+				.append(", hiddensections=").append(hiddensections).append(", groupmode=").append(groupmode)
+				.append(", groupmodeforce=").append(groupmodeforce).append(", defaultgroupingid=")
+				.append(defaultgroupingid).append(", enablecompletion=").append(enablecompletion)
+				.append(", completionstartonenrol=").append(completionstartonenrol).append(", completionnotify=")
+				.append(completionnotify).append(", visible=").append(visible).append(", categorysortorder=")
+				.append(categorysortorder).append(", timecreated=").append(timecreated).append(", timemodified=")
+				.append(timemodified).append(", summary=").append(summary).append(", idnumber=").append(idnumber)
+				.append(", lang=").append(lang).append(", forcetheme=").append(forcetheme).append(", startdate=")
+				.append(startdate).append(", enrolledusercount=").append(enrolledusercount)
+				.append(", courseformatoptions=").append(courseformatoptions).append("]");
+		return builder.toString();
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((categoryid == null) ? 0 : categoryid.hashCode());
+		result = prime * result + ((categorysortorder == null) ? 0 : categorysortorder.hashCode());
+		result = prime * result + ((completionnotify == null) ? 0 : completionnotify.hashCode());
+		result = prime * result + ((completionstartonenrol == null) ? 0 : completionstartonenrol.hashCode());
+		result = prime * result + ((courseformatoptions == null) ? 0 : courseformatoptions.hashCode());
+		result = prime * result + ((defaultgroupingid == null) ? 0 : defaultgroupingid.hashCode());
+		result = prime * result + ((enablecompletion == null) ? 0 : enablecompletion.hashCode());
+		result = prime * result + ((enrolledusercount == null) ? 0 : enrolledusercount.hashCode());
+		result = prime * result + ((forcetheme == null) ? 0 : forcetheme.hashCode());
+		result = prime * result + ((format == null) ? 0 : format.hashCode());
+		result = prime * result + ((fullname == null) ? 0 : fullname.hashCode());
+		result = prime * result + ((groupmode == null) ? 0 : groupmode.hashCode());
+		result = prime * result + ((groupmodeforce == null) ? 0 : groupmodeforce.hashCode());
+		result = prime * result + ((hiddensections == null) ? 0 : hiddensections.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((idnumber == null) ? 0 : idnumber.hashCode());
+		result = prime * result + ((lang == null) ? 0 : lang.hashCode());
+		result = prime * result + ((maxbytes == null) ? 0 : maxbytes.hashCode());
+		result = prime * result + ((newsitems == null) ? 0 : newsitems.hashCode());
+		result = prime * result + ((numsections == null) ? 0 : numsections.hashCode());
+		result = prime * result + ((shortname == null) ? 0 : shortname.hashCode());
+		result = prime * result + ((showgrades == null) ? 0 : showgrades.hashCode());
+		result = prime * result + ((showreports == null) ? 0 : showreports.hashCode());
+		result = prime * result + ((startdate == null) ? 0 : startdate.hashCode());
+		result = prime * result + ((summary == null) ? 0 : summary.hashCode());
+		result = prime * result + ((summaryformat == null) ? 0 : summaryformat.hashCode());
+		result = prime * result + ((timecreated == null) ? 0 : timecreated.hashCode());
+		result = prime * result + ((timemodified == null) ? 0 : timemodified.hashCode());
+		result = prime * result + ((visible == null) ? 0 : visible.hashCode());
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MoodleCourse other = (MoodleCourse) obj;
+		if (categoryid == null) {
+			if (other.categoryid != null)
+				return false;
+		} else if (!categoryid.equals(other.categoryid))
+			return false;
+		if (categorysortorder == null) {
+			if (other.categorysortorder != null)
+				return false;
+		} else if (!categorysortorder.equals(other.categorysortorder))
+			return false;
+		if (completionnotify == null) {
+			if (other.completionnotify != null)
+				return false;
+		} else if (!completionnotify.equals(other.completionnotify))
+			return false;
+		if (completionstartonenrol == null) {
+			if (other.completionstartonenrol != null)
+				return false;
+		} else if (!completionstartonenrol.equals(other.completionstartonenrol))
+			return false;
+		if (courseformatoptions == null) {
+			if (other.courseformatoptions != null)
+				return false;
+		} else if (!courseformatoptions.equals(other.courseformatoptions))
+			return false;
+		if (defaultgroupingid == null) {
+			if (other.defaultgroupingid != null)
+				return false;
+		} else if (!defaultgroupingid.equals(other.defaultgroupingid))
+			return false;
+		if (enablecompletion == null) {
+			if (other.enablecompletion != null)
+				return false;
+		} else if (!enablecompletion.equals(other.enablecompletion))
+			return false;
+		if (enrolledusercount == null) {
+			if (other.enrolledusercount != null)
+				return false;
+		} else if (!enrolledusercount.equals(other.enrolledusercount))
+			return false;
+		if (forcetheme == null) {
+			if (other.forcetheme != null)
+				return false;
+		} else if (!forcetheme.equals(other.forcetheme))
+			return false;
+		if (format == null) {
+			if (other.format != null)
+				return false;
+		} else if (!format.equals(other.format))
+			return false;
+		if (fullname == null) {
+			if (other.fullname != null)
+				return false;
+		} else if (!fullname.equals(other.fullname))
+			return false;
+		if (groupmode == null) {
+			if (other.groupmode != null)
+				return false;
+		} else if (!groupmode.equals(other.groupmode))
+			return false;
+		if (groupmodeforce == null) {
+			if (other.groupmodeforce != null)
+				return false;
+		} else if (!groupmodeforce.equals(other.groupmodeforce))
+			return false;
+		if (hiddensections == null) {
+			if (other.hiddensections != null)
+				return false;
+		} else if (!hiddensections.equals(other.hiddensections))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (idnumber == null) {
+			if (other.idnumber != null)
+				return false;
+		} else if (!idnumber.equals(other.idnumber))
+			return false;
+		if (lang == null) {
+			if (other.lang != null)
+				return false;
+		} else if (!lang.equals(other.lang))
+			return false;
+		if (maxbytes == null) {
+			if (other.maxbytes != null)
+				return false;
+		} else if (!maxbytes.equals(other.maxbytes))
+			return false;
+		if (newsitems == null) {
+			if (other.newsitems != null)
+				return false;
+		} else if (!newsitems.equals(other.newsitems))
+			return false;
+		if (numsections == null) {
+			if (other.numsections != null)
+				return false;
+		} else if (!numsections.equals(other.numsections))
+			return false;
+		if (shortname == null) {
+			if (other.shortname != null)
+				return false;
+		} else if (!shortname.equals(other.shortname))
+			return false;
+		if (showgrades == null) {
+			if (other.showgrades != null)
+				return false;
+		} else if (!showgrades.equals(other.showgrades))
+			return false;
+		if (showreports == null) {
+			if (other.showreports != null)
+				return false;
+		} else if (!showreports.equals(other.showreports))
+			return false;
+		if (startdate == null) {
+			if (other.startdate != null)
+				return false;
+		} else if (!startdate.equals(other.startdate))
+			return false;
+		if (summary == null) {
+			if (other.summary != null)
+				return false;
+		} else if (!summary.equals(other.summary))
+			return false;
+		if (summaryformat != other.summaryformat)
+			return false;
+		if (timecreated == null) {
+			if (other.timecreated != null)
+				return false;
+		} else if (!timecreated.equals(other.timecreated))
+			return false;
+		if (timemodified == null) {
+			if (other.timemodified != null)
+				return false;
+		} else if (!timemodified.equals(other.timemodified))
+			return false;
+		if (visible == null) {
+			if (other.visible != null)
+				return false;
+		} else if (!visible.equals(other.visible))
+			return false;
+		return true;
+	}
+
+	/**
+	 * Default Comparable
+	 */
+	@Override
+	public int compareTo(MoodleCourse o) {
+		return this.id.intValue() - o.getId().intValue();
 	}
     
     
