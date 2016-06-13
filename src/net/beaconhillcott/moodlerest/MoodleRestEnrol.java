@@ -536,7 +536,7 @@ public class MoodleRestEnrol implements Serializable {
       }
       v.removeAllElements();
       for (int i=0; i<courses.length; i++) {
-        courses[i]=MoodleRestCourse.getCourseFromId(courses[i].getId());
+        courses[i]=MoodleRestCourse.getCourseById(courses[i].getId());
       }
       return courses;
     }
@@ -578,7 +578,7 @@ public class MoodleRestEnrol implements Serializable {
       }
       v.removeAllElements();
       for (int i=0; i<courses.length; i++) {
-        courses[i]=MoodleRestCourse.getCourseFromId(courses[i].getId());
+        courses[i]=MoodleRestCourse.getCourseById(courses[i].getId());
       }
       return courses;
     }

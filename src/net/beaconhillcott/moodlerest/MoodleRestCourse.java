@@ -161,7 +161,7 @@ public class MoodleRestCourse implements Serializable {
      * @throws UnsupportedEncodingException
      * @throws MoodleRestException
      */
-    public static MoodleCourse getCourseFromId(Long id) throws MoodleRestCourseException, UnsupportedEncodingException, MoodleRestException {
+    public static MoodleCourse getCourseById(Long id) throws MoodleRestCourseException, UnsupportedEncodingException, MoodleRestException {
         Long[] a=new Long[1];
         a[0]=id;
         MoodleCourse[] crs=getCoursesById(a);
