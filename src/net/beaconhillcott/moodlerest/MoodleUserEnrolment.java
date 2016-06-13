@@ -20,67 +20,86 @@ package net.beaconhillcott.moodlerest;
 import java.io.Serializable;
 
 public class MoodleUserEnrolment implements Serializable {
-  private Integer roleId=null;
-  private Long userId=null;
-  private Long courseId=null;
-  private Long timeStart=null;
-  private Long timeEnd=null;
-  private Integer suspend=null;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4977383120625721566L;
 
-  public MoodleUserEnrolment() {}
+	private Long roleId = null;
+	private Long userId = null;
+	private Long courseId = null;
+	private Long timeStart = null;
+	private Long timeEnd = null;
+	private Integer suspend = null;
 
-  public MoodleUserEnrolment(Integer roleId, Long userId, Long courseId) {
-    this.roleId=roleId;
-    this.userId=userId;
-    this.courseId=courseId;
-  }
+	public MoodleUserEnrolment() {
+	}
 
-  public Long getCourseId() {
-    return courseId;
-  }
+	public MoodleUserEnrolment(Long roleId, Long userId, Long courseId) {
+		this.roleId = roleId;
+		this.userId = userId;
+		this.courseId = courseId;
+	}
 
-  public void setCourseId(Long courseId) {
-    this.courseId = courseId;
-  }
+	public Long getCourseId() {
+		return courseId;
+	}
 
-  public Integer getRoleId() {
-    return roleId;
-  }
+	public void setCourseId(Long courseId) {
+		this.courseId = courseId;
+	}
 
-  public void setRoleId(Integer roleId) {
-    this.roleId = roleId;
-  }
+	public Long getRoleId() {
+		return roleId;
+	}
 
-  public Integer getSuspend() {
-    return suspend;
-  }
+	public void setRoleId(Long roleId) {
+		this.roleId = roleId;
+	}
 
-  public void setSuspend(Integer suspend) {
-    this.suspend = suspend;
-  }
+	public Integer getSuspend() {
+		return suspend;
+	}
 
-  public Long getTimeEnd() {
-    return timeEnd;
-  }
+	public void setSuspend(Integer suspend) {
+		this.suspend = suspend;
+	}
 
-  public void setTimeEnd(Long timeEnd) {
-    this.timeEnd = timeEnd;
-  }
+	public Long getTimeEnd() {
+		return timeEnd;
+	}
 
-  public Long getTimeStart() {
-    return timeStart;
-  }
+	public void setTimeEnd(Long timeEnd) {
+		this.timeEnd = timeEnd;
+	}
 
-  public void setTimeStart(Long timeStart) {
-    this.timeStart = timeStart;
-  }
+	public Long getTimeStart() {
+		return timeStart;
+	}
 
-  public Long getUserId() {
-    return userId;
-  }
+	public void setTimeStart(Long timeStart) {
+		this.timeStart = timeStart;
+	}
 
-  public void setUserId(Long userId) {
-    this.userId = userId;
-  }
-  
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("MoodleUserEnrolment [roleId=").append(roleId).append(", userId=").append(userId)
+				.append(", courseId=").append(courseId).append(", timeStart=").append(timeStart).append(", timeEnd=")
+				.append(timeEnd).append(", suspend=").append(suspend).append("]");
+		return builder.toString();
+	}
+	
+
 }

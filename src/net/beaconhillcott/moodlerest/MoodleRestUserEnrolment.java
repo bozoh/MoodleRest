@@ -45,6 +45,8 @@ public class MoodleRestUserEnrolment implements Serializable {
                 if (users[i].getCourseId()==null) throw new MoodleRestUserEnrolmentException(MoodleRestUserException.PASSWORD_NULL); else data.append("&").append(URLEncoder.encode("enrolments["+i+"][courseid]", MoodleServices.ENCODING.toString())).append("=").append(URLEncoder.encode(users[i].getCourseId().toString(), MoodleServices.ENCODING.toString()));
                 if (users[i].getTimeStart()!=null) data.append("&").append(URLEncoder.encode("enrolments["+i+"][timestart]", MoodleServices.ENCODING.toString())).append("=").append(URLEncoder.encode(users[i].getTimeStart().toString(), MoodleServices.ENCODING.toString()));
                 if (users[i].getTimeEnd()!=null) data.append("&").append(URLEncoder.encode("enrolments["+i+"][timeend]", MoodleServices.ENCODING.toString())).append("=").append(URLEncoder.encode(users[i].getTimeEnd().toString(), MoodleServices.ENCODING.toString()));
+                //TODO Change to a boolean value, checking id null is not right, user can put 0 to 
+                //not suspend user for example
                 if (users[i].getSuspend()!=null) data.append("&").append(URLEncoder.encode("enrolments["+i+"][suspend]", MoodleServices.ENCODING.toString())).append("=").append(URLEncoder.encode(users[i].getSuspend().toString(), MoodleServices.ENCODING.toString()));
             }
             data.trimToSize();
