@@ -1241,8 +1241,8 @@ public class MoodleUser implements Serializable, Comparable<MoodleUser> {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("MoodleUser [id=").append(id).append(", username=").append(username).append(", password=")
-				.append(password).append(", firstname=").append(firstname).append(", lastname=").append(lastname)
+		builder.append("MoodleUser [id=").append(id).append(", username=").append(username).append(", password=<THIS IS SECRET>")
+				.append(", firstname=").append(firstname).append(", lastname=").append(lastname)
 				.append(", email=").append(email).append(", auth=").append(auth).append(", idnumber=").append(idnumber)
 				.append(", lang=").append(lang).append(", theme=").append(theme).append(", timezone=").append(timezone)
 				.append(", mailformat=").append(mailformat).append(", description=").append(description)
