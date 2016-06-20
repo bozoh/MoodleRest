@@ -64,7 +64,7 @@ public class MoodleCallRestWebService implements Serializable {
 	private static String password = null;
 	private static String url = null;
 	private static boolean legacy = false;
-	private static boolean debug = false;
+	private static boolean debug = true;
 
 	/**
 	 * Constructor for bean usage.

@@ -28,7 +28,7 @@ public class UserList implements Serializable {
   
   private Long userId=null;
   private Long courseId=null;
-  private Integer roleId=null;
+  private Long roleId=null;
   private Boolean configured=null;
   
   /**
@@ -46,7 +46,7 @@ public class UserList implements Serializable {
     this.courseId=courseId;
   }
 
-  public UserList(Long userId, Long courseId, Integer roleId) {
+  public UserList(Long userId, Long courseId, Long roleId) {
     this.userId=userId;
     this.courseId=courseId;
     this.roleId=roleId;
@@ -84,11 +84,11 @@ public class UserList implements Serializable {
     this.courseId=courseId;
   }
 
-  public Integer getRoleId() {
+  public Long getRoleId() {
     return roleId;
   }
 
-  public void setRoleId(Integer roleId) {
+  public void setRoleId(Long roleId) {
     this.roleId = roleId;
   }
 
