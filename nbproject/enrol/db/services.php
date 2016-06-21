@@ -17,7 +17,7 @@
 /**
  * Manual plugin external functions and service definitions.
  *
- * @package    enrol_manual
+ * @package    local_enrol
  * @category   webservice
  * @copyright  2011 Jerome Mouneyrac
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,29 +25,10 @@
 
 $functions = array(
 
-    // === enrol related functions ===
-    'moodle_enrol_manual_enrol_users' => array(
-        'classname'   => 'moodle_enrol_manual_external',
-        'methodname'  => 'manual_enrol_users',
-        'classpath'   => 'enrol/manual/externallib.php',
-        'description' => 'DEPRECATED: this deprecated function will be removed in a future version. This function has be renamed as enrol_manual_enrol_users()',
-        'capabilities'=> 'enrol/manual:enrol',
-        'type'        => 'write',
-    ),
-
-    'enrol_manual_enrol_users' => array(
-        'classname'   => 'enrol_manual_external',
-        'methodname'  => 'enrol_users',
-        'classpath'   => 'enrol/manual/externallib.php',
-        'description' => 'Manual enrol users',
-        'capabilities'=> 'enrol/manual:enrol',
-        'type'        => 'write',
-    ),
-
     'enrol_manual_unenrol_users' => array(
-        'classname'   => 'enrol_manual_external',
+        'classname'   => 'local_enrol_manual_external',
         'methodname'  => 'unenrol_users',
-        'classpath'   => 'enrol/manual/externallib.php',
+        'classpath'   => 'local/enrol/externallib.php',
         'description' => 'Manual unenrol users',
         'capabilities'=> 'enrol/manual:unenrol',
         'type'        => 'write',

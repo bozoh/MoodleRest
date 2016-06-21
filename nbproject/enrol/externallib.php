@@ -20,7 +20,7 @@
  * This api is mostly read only, the actual enrol and unenrol
  * support is in each enrol plugin.
  *
- * @package    enrol_manual
+ * @package    local_enrol
  * @category   external
  * @copyright  2011 Jerome Mouneyrac
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -39,7 +39,7 @@ require_once("$CFG->libdir/externallib.php");
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @since Moodle 2.6
  */
-class enrol_manual_external extends external_api {
+class local_enrol_manual_external extends external_api {
 
     /**
      * Returns description of method parameters.
