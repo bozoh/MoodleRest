@@ -2,3 +2,9 @@
 /build/
 /dist/
 /bin/
+*.exc
+target
+.settings
+*.log
+.classpath
+.project
