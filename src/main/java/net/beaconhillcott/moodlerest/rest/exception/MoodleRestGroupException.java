@@ -24,19 +24,20 @@ package net.beaconhillcott.moodlerest.rest.exception;
  */
 public class MoodleRestGroupException extends MoodleRestException {
 
-    /**
-     *
-     */
-    public static final String NO_LEGACY_CALL="No legacy call";
-    
-    MoodleRestGroupException() {}
+	/**
+	 *
+	 */
+	public static final String NO_LEGACY_CALL = "No legacy call";
 
-    MoodleRestGroupException(String msg) {
-        super(msg);
-    }
+	public MoodleRestGroupException() {
+	}
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
+	public MoodleRestGroupException(String msg) {
+		super(msg);
+	}
+
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
 }

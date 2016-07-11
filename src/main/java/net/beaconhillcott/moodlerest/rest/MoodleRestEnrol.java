@@ -18,14 +18,38 @@
 
 package net.beaconhillcott.moodlerest.rest;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.w3c.dom.NodeList;
-import java.io.Serializable;
-import java.util.ArrayList;
+
+import net.beaconhillcott.moodlerest.commons.Capability;
+import net.beaconhillcott.moodlerest.commons.CourseEnrolledUserCapability;
+import net.beaconhillcott.moodlerest.commons.MoodleCourse;
+import net.beaconhillcott.moodlerest.commons.MoodleCourseUser;
+import net.beaconhillcott.moodlerest.commons.MoodleEnrolInstance;
+import net.beaconhillcott.moodlerest.commons.MoodleEnrolUser;
+import net.beaconhillcott.moodlerest.commons.MoodleEnrolmentMethod;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleUser;
+import net.beaconhillcott.moodlerest.commons.MoodleUserKey;
+import net.beaconhillcott.moodlerest.commons.MoodleUsersWithCapability;
+import net.beaconhillcott.moodlerest.commons.OptionParameter;
+import net.beaconhillcott.moodlerest.commons.UserCustomField;
+import net.beaconhillcott.moodlerest.commons.UserEnrolledCourse;
+import net.beaconhillcott.moodlerest.commons.UserGroup;
+import net.beaconhillcott.moodlerest.commons.UserList;
+import net.beaconhillcott.moodlerest.commons.UserPreference;
+import net.beaconhillcott.moodlerest.commons.UserRole;
+import net.beaconhillcott.moodlerest.commos.exception.MoodleUserRoleException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCourseException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestEnrolException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
 
 /**
  * <p>Class containing the static routines to manipulate the enrolment information within Moodle.<br />

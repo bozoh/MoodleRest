@@ -17,11 +17,17 @@
  */
 package net.beaconhillcott.moodlerest.rest;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+
 import org.w3c.dom.NodeList;
-import java.io.Serializable;
+
+import net.beaconhillcott.moodlerest.commons.MoodleCalendar;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCalendarException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
 
 /**
  *

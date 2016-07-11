@@ -11,5 +11,5 @@ package net.beaconhillcott.moodlerest.rest.exception;
  * @author root
  */
 public class MoodleRestCommentsException extends Exception {
-  
+
 }

@@ -18,13 +18,28 @@
 
 package net.beaconhillcott.moodlerest.rest;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Vector;
+
 import org.w3c.dom.NodeList;
-import java.io.Serializable;
+
+import net.beaconhillcott.moodlerest.commons.MoodleCategory;
+import net.beaconhillcott.moodlerest.commons.MoodleCourse;
+import net.beaconhillcott.moodlerest.commons.MoodleCourseContent;
+import net.beaconhillcott.moodlerest.commons.MoodleCourseContentOption;
+import net.beaconhillcott.moodlerest.commons.MoodleDuplicatedCourse;
+import net.beaconhillcott.moodlerest.commons.MoodleListStatus;
+import net.beaconhillcott.moodlerest.commons.MoodleModule;
+import net.beaconhillcott.moodlerest.commons.MoodleModuleContent;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.commons.OptionParameter;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCourseException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
 
 /**
  * <p>

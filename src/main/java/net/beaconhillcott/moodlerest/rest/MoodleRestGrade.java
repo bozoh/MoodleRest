@@ -8,12 +8,20 @@ import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import net.beaconhillcott.moodlerest.MoodleGradeArea.GradeDefinition.Guide;
-import net.beaconhillcott.moodlerest.MoodleGradeArea.GradeDefinition.Guide.GuideComment;
-import net.beaconhillcott.moodlerest.MoodleGradeArea.GradeDefinition.Guide.GuideCriteria;
-import net.beaconhillcott.moodlerest.MoodleGradeArea.GradeDefinition.Rubric.RubricCriteria.Level;
+
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.MoodleGradeArea;
+import net.beaconhillcott.moodlerest.commons.MoodleGradeArea.GradeDefinition.Guide;
+import net.beaconhillcott.moodlerest.commons.MoodleGradeArea.GradeDefinition.Guide.GuideComment;
+import net.beaconhillcott.moodlerest.commons.MoodleGradeArea.GradeDefinition.Guide.GuideCriteria;
+import net.beaconhillcott.moodlerest.commons.MoodleGradeArea.GradeDefinition.Rubric.RubricCriteria.Level;
+import net.beaconhillcott.moodlerest.commons.MoodleGradeInstance;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestGradeException;
 
 /**
  *

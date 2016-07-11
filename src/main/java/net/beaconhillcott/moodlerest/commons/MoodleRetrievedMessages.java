@@ -14,20 +14,22 @@ import java.util.ArrayList;
  * @author root
  */
 public class MoodleRetrievedMessages extends MoodleWarnings implements Serializable {
-  ArrayList<MoodleRetrievedMessage> messages=null;
+	ArrayList<MoodleRetrievedMessage> messages = null;
 
-  public MoodleRetrievedMessages() {}
+	public MoodleRetrievedMessages() {
+	}
 
-  public ArrayList<MoodleRetrievedMessage> getMessages() {
-    return messages;
-  }
+	public ArrayList<MoodleRetrievedMessage> getMessages() {
+		return messages;
+	}
 
-  public void setMessages(ArrayList<MoodleRetrievedMessage> messages) {
-    this.messages = messages;
-  }
-  
-  public void addMessage(MoodleRetrievedMessage message) {
-    if (messages==null) messages=new ArrayList<MoodleRetrievedMessage>();
-    messages.add(message);
-  }
+	public void setMessages(ArrayList<MoodleRetrievedMessage> messages) {
+		this.messages = messages;
+	}
+
+	public void addMessage(MoodleRetrievedMessage message) {
+		if (messages == null)
+			messages = new ArrayList<MoodleRetrievedMessage>();
+		messages.add(message);
+	}
 }

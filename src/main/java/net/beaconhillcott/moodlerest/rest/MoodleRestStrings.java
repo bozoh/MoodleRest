@@ -8,7 +8,14 @@ import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+
 import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.ComponentString;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.OptionParameter;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestStringsException;
 /**
  *
  * @author root

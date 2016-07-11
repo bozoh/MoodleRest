@@ -27,3 +27,4 @@ public class MoodleUserRoleException extends MoodleException implements Serializ
         return super.getMessage();
     }
 }
+ 

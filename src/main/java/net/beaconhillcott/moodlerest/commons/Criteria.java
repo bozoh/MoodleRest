@@ -24,54 +24,55 @@ import java.io.Serializable;
  *
  * @author root
  */
-public class Criteria  implements Serializable {
-  private String key=null;
-  private String value=null;
+public class Criteria implements Serializable {
+	private String key = null;
+	private String value = null;
 
-  /**
-   *
-   */
-  public Criteria() {}
+	/**
+	 *
+	 */
+	public Criteria() {
+	}
 
-  /**
-   *
-   * @param name
-   * @param value
-   */
-  public Criteria(String key, String value) {
-    this.key=key;
-    this.value=value;
-  }
+	/**
+	 *
+	 * @param name
+	 * @param value
+	 */
+	public Criteria(String key, String value) {
+		this.key = key;
+		this.value = value;
+	}
 
-  /**
-   *
-   * @return  String
-   */
-  public String getKey() {
-    return key;
-  }
+	/**
+	 *
+	 * @return String
+	 */
+	public String getKey() {
+		return key;
+	}
 
-  /**
-   *
-   * @return String
-   */
-  public String getValue() {
-    return value;
-  }
+	/**
+	 *
+	 * @return String
+	 */
+	public String getValue() {
+		return value;
+	}
 
-  /**
-   *
-   * @param name
-   */
-  public void setKey(String key) {
-    this.key=key;
-  }
+	/**
+	 *
+	 * @param name
+	 */
+	public void setKey(String key) {
+		this.key = key;
+	}
 
-  /**
-   *
-   * @param value
-   */
-  public void setValue(String value) {
-    this.value=value;
-  }
+	/**
+	 *
+	 * @param value
+	 */
+	public void setValue(String value) {
+		this.value = value;
+	}
 }

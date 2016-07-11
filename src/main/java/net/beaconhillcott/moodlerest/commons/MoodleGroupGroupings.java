@@ -6,107 +6,114 @@ package net.beaconhillcott.moodlerest.commons;
 
 import java.io.Serializable;
 
+import net.beaconhillcott.moodlerest.commos.exception.MoodleGroupGroupingsException;
+
 /**
  *
  * @author root
  */
 public class MoodleGroupGroupings implements Serializable {
-  
-  private Long id=null;
-  private Long courseid=null;
-  private String name=null;
-  private String description=null;
-  private DescriptionFormat descriptionformat=DescriptionFormat.HTML;
 
-  public MoodleGroupGroupings() {
-  }
+	private Long id = null;
+	private Long courseid = null;
+	private String name = null;
+	private String description = null;
+	private DescriptionFormat descriptionformat = DescriptionFormat.HTML;
 
-  public MoodleGroupGroupings(Long courseid, String name, String description) {
-    this.courseid=courseid;
-    this.name=name;
-    this.description=description;
-  }
-  
-  public MoodleGroupGroupings(Long courseid, String name, String description, DescriptionFormat descriptionformat) {
-    this.courseid=courseid;
-    this.name=name;
-    this.description=description;
-    this.descriptionformat=descriptionformat;
-  }
-  
-  public MoodleGroupGroupings(Long id, Long courseid, String name, String description, DescriptionFormat descriptionformat) {
-    this.id=id;
-    this.courseid=courseid;
-    this.name=name;
-    this.description=description;
-    this.descriptionformat=descriptionformat;
-  }
+	public MoodleGroupGroupings() {
+	}
 
-  public MoodleGroupGroupings(Long id) {
-    this.id=id;
-  }
-  
-  public void setMoodleGroupGroupingsField(String nodeName,String content) throws MoodleGroupGroupingsException {
-    if (nodeName.equals("id")) setId(Long.valueOf(content));
-    if (nodeName.equals("courseid")) setCourseid(Long.valueOf(content));
-    if (nodeName.equals("name")) setName(content);
-    if (nodeName.equals("description")) setDescription(content);
-    if (nodeName.equals("descriptionformat")) {
-      setDescriptionformat(Integer.parseInt(content));
-    }
-  }
+	public MoodleGroupGroupings(Long courseid, String name, String description) {
+		this.courseid = courseid;
+		this.name = name;
+		this.description = description;
+	}
 
-  public Long getId() {
-    return id;
-  }
+	public MoodleGroupGroupings(Long courseid, String name, String description, DescriptionFormat descriptionformat) {
+		this.courseid = courseid;
+		this.name = name;
+		this.description = description;
+		this.descriptionformat = descriptionformat;
+	}
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+	public MoodleGroupGroupings(Long id, Long courseid, String name, String description,
+			DescriptionFormat descriptionformat) {
+		this.id = id;
+		this.courseid = courseid;
+		this.name = name;
+		this.description = description;
+		this.descriptionformat = descriptionformat;
+	}
 
-  public Long getCourseid() {
-    return courseid;
-  }
+	public MoodleGroupGroupings(Long id) {
+		this.id = id;
+	}
 
-  public void setCourseid(Long courseid) {
-    this.courseid = courseid;
-  }
+	public void setMoodleGroupGroupingsField(String nodeName, String content) throws MoodleGroupGroupingsException {
+		if (nodeName.equals("id"))
+			setId(Long.valueOf(content));
+		if (nodeName.equals("courseid"))
+			setCourseid(Long.valueOf(content));
+		if (nodeName.equals("name"))
+			setName(content);
+		if (nodeName.equals("description"))
+			setDescription(content);
+		if (nodeName.equals("descriptionformat")) {
+			setDescriptionformat(Integer.parseInt(content));
+		}
+	}
 
-  public String getDescription() {
-    return description;
-  }
+	public Long getId() {
+		return id;
+	}
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-  public DescriptionFormat getDescriptionformat() {
-    return descriptionformat;
-  }
+	public Long getCourseid() {
+		return courseid;
+	}
 
-  public void setDescriptionformat(DescriptionFormat descriptionformat) {
-    this.descriptionformat = descriptionformat;
-  }
-  
-  public void setDescriptionformat(Integer descriptionformat) throws MoodleGroupGroupingsException {
-    boolean flag=false;
-    for(DescriptionFormat d : DescriptionFormat.values()) {
-      if (d.toInt()==descriptionformat) {
-        this.descriptionformat=d;
-        flag=true;
-      }
-    }
-    if (!flag) {
-      throw new MoodleGroupGroupingsException();
-    }
-  }
+	public void setCourseid(Long courseid) {
+		this.courseid = courseid;
+	}
 
-  public String getName() {
-    return name;
-  }
+	public String getDescription() {
+		return description;
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
-  
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public DescriptionFormat getDescriptionformat() {
+		return descriptionformat;
+	}
+
+	public void setDescriptionformat(DescriptionFormat descriptionformat) {
+		this.descriptionformat = descriptionformat;
+	}
+
+	public void setDescriptionformat(Integer descriptionformat) throws MoodleGroupGroupingsException {
+		boolean flag = false;
+		for (DescriptionFormat d : DescriptionFormat.values()) {
+			if (d.toInt() == descriptionformat) {
+				this.descriptionformat = d;
+				flag = true;
+			}
+		}
+		if (!flag) {
+			throw new MoodleGroupGroupingsException();
+		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }

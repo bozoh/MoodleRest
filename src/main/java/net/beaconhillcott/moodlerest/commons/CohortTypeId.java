@@ -11,18 +11,16 @@ import java.io.Serializable;
  * @author root
  */
 public enum CohortTypeId implements Serializable {
-  ID("id"),
-  ID_NUMBER("idnumber"),
-  SYSTEM("system");
-  
-  private CohortTypeId(String value) {
-    this.value=value;
-  }
+	ID("id"), ID_NUMBER("idnumber"), SYSTEM("system");
 
-  private String value;
+	private CohortTypeId(String value) {
+		this.value = value;
+	}
 
-  @Override
-  public String toString() {
-    return value;
-  }
+	private String value;
+
+	@Override
+	public String toString() {
+		return value;
+	}
 }

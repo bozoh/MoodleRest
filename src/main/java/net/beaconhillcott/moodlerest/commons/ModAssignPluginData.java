@@ -13,26 +13,26 @@ import java.io.Serializable;
  * @author root
  */
 public class ModAssignPluginData implements Serializable {
-  private ModAssignFeedbackCommentsEditor assignFeedbackCommentsEditor=null;
-  private Long filesFilemanager=null;
+	private ModAssignFeedbackCommentsEditor assignFeedbackCommentsEditor = null;
+	private Long filesFilemanager = null;
 
-  public ModAssignPluginData() {
-  }
+	public ModAssignPluginData() {
+	}
 
-  public ModAssignFeedbackCommentsEditor getAssignFeedbackCommentsEditor() {
-    return assignFeedbackCommentsEditor;
-  }
+	public ModAssignFeedbackCommentsEditor getAssignFeedbackCommentsEditor() {
+		return assignFeedbackCommentsEditor;
+	}
 
-  public void setAssignFeedbackCommentsEditor(ModAssignFeedbackCommentsEditor assignFeedbackCommentsEditor) {
-    this.assignFeedbackCommentsEditor = assignFeedbackCommentsEditor;
-  }
+	public void setAssignFeedbackCommentsEditor(ModAssignFeedbackCommentsEditor assignFeedbackCommentsEditor) {
+		this.assignFeedbackCommentsEditor = assignFeedbackCommentsEditor;
+	}
 
-  public Long getFilesFilemanager() {
-    return filesFilemanager;
-  }
+	public Long getFilesFilemanager() {
+		return filesFilemanager;
+	}
 
-  public void setFilesFilemanager(Long filesFilemanager) {
-    this.filesFilemanager = filesFilemanager;
-  }
-  
+	public void setFilesFilemanager(Long filesFilemanager) {
+		this.filesFilemanager = filesFilemanager;
+	}
+
 }

@@ -24,24 +24,25 @@ package net.beaconhillcott.moodlerest.rest.exception;
  */
 public class MoodleRestMessageException extends MoodleRestException {
 
-    /**
-     *
-     */
-    public static final String NO_RECIPIENT="Recipient id is required";
-    /**
-     *
-     */
-    public static final String NO_MESSAGE="Message text is required";
-    
-    MoodleRestMessageException() {}
-    
-    MoodleRestMessageException(String msg) {
-        super(msg);
-    }
+	/**
+	 *
+	 */
+	public static final String NO_RECIPIENT = "Recipient id is required";
+	/**
+	 *
+	 */
+	public static final String NO_MESSAGE = "Message text is required";
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
+	public MoodleRestMessageException() {
+	}
+
+	public MoodleRestMessageException(String msg) {
+		super(msg);
+	}
+
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
 
 }

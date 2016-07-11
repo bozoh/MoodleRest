@@ -14,23 +14,23 @@ import java.util.ArrayList;
  * @author root
  */
 public class MoodleDatabases extends MoodleWarnings implements Serializable {
-  ArrayList<MoodleDatabase> databases=null;
+	ArrayList<MoodleDatabase> databases = null;
 
-  public MoodleDatabases() {
-  }
+	public MoodleDatabases() {
+	}
 
-  public ArrayList<MoodleDatabase> getDatabases() {
-    return databases;
-  }
+	public ArrayList<MoodleDatabase> getDatabases() {
+		return databases;
+	}
 
-  public void setDatabases(ArrayList<MoodleDatabase> databases) {
-    this.databases = databases;
-  }
-  
-  public void addDatabase(MoodleDatabase database) {
-    if (databases==null) {
-      databases=new ArrayList<MoodleDatabase>();
-    }
-    databases.add(database);
-  }
+	public void setDatabases(ArrayList<MoodleDatabase> databases) {
+		this.databases = databases;
+	}
+
+	public void addDatabase(MoodleDatabase database) {
+		if (databases == null) {
+			databases = new ArrayList<MoodleDatabase>();
+		}
+		databases.add(database);
+	}
 }

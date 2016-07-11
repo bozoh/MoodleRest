@@ -11,11 +11,11 @@ import java.io.Serializable;
  * @author root
  */
 public class MoodleRestStringsException extends MoodleRestException implements Serializable {
-  
-  public MoodleRestStringsException(String string) {
-  }
 
-  MoodleRestStringsException() {
-    throw new UnsupportedOperationException("Not supported yet.");
-  }
+	public MoodleRestStringsException(String string) {
+	}
+
+	public MoodleRestStringsException() {
+		throw new UnsupportedOperationException("Not supported yet.");
+	}
 }

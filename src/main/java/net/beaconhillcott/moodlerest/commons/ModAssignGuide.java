@@ -14,25 +14,26 @@ import java.util.ArrayList;
  * @author root
  */
 public class ModAssignGuide implements Serializable {
-  private ArrayList<ModAssignGuideCriteria> criteria=null;
+	private ArrayList<ModAssignGuideCriteria> criteria = null;
 
-  public ModAssignGuide() {
-  }
+	public ModAssignGuide() {
+	}
 
-  public ModAssignGuide(ArrayList<ModAssignGuideCriteria> criteria) {
-    this.criteria = criteria;
-  }
+	public ModAssignGuide(ArrayList<ModAssignGuideCriteria> criteria) {
+		this.criteria = criteria;
+	}
 
-  public ArrayList<ModAssignGuideCriteria> getCriteria() {
-    return criteria;
-  }
+	public ArrayList<ModAssignGuideCriteria> getCriteria() {
+		return criteria;
+	}
 
-  public void setCriteria(ArrayList<ModAssignGuideCriteria> criteria) {
-    this.criteria = criteria;
-  }
-  
-  public void addGuideCriteria(ModAssignGuideCriteria guideCriteria) {
-    if (criteria==null) criteria=new ArrayList<ModAssignGuideCriteria>();
-    criteria.add(guideCriteria);
-  }
+	public void setCriteria(ArrayList<ModAssignGuideCriteria> criteria) {
+		this.criteria = criteria;
+	}
+
+	public void addGuideCriteria(ModAssignGuideCriteria guideCriteria) {
+		if (criteria == null)
+			criteria = new ArrayList<ModAssignGuideCriteria>();
+		criteria.add(guideCriteria);
+	}
 }

@@ -6,6 +6,8 @@ package net.beaconhillcott.moodlerest.commons;
 
 import java.io.Serializable;
 
+import net.beaconhillcott.moodlerest.commos.exception.MoodleCohortException;
+
 /**
  *
  * @author root

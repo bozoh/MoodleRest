@@ -21,59 +21,71 @@ package net.beaconhillcott.moodlerest.commons;
 import java.io.Serializable;
 
 /**
- * Class used to hold user/course memberships. Returned when fetching a list of users enrolled in a course.
+ * Class used to hold user/course memberships. Returned when fetching a list of
+ * users enrolled in a course.
+ * 
  * @see MoodleRestCourse
  * @author Bill Antonia
  */
 public class MoodleCourseUser implements Serializable {
 
-    private Long courseid=null;
-    private Long userid=null;
+	private Long courseid = null;
+	private Long userid = null;
 
-    /**
-     * Constructor for bean requirements
-     */
-    public MoodleCourseUser(){}
+	/**
+	 * Constructor for bean requirements
+	 */
+	public MoodleCourseUser() {
+	}
 
-    /**
-     * Constructor setting user to course membership
-     * @param courseid Long
-     * @param userid Long
-     */
-    public MoodleCourseUser(Long courseid, Long userid) {
-        this.courseid=courseid;
-        this.userid=userid;
-    }
+	/**
+	 * Constructor setting user to course membership
+	 * 
+	 * @param courseid
+	 *            Long
+	 * @param userid
+	 *            Long
+	 */
+	public MoodleCourseUser(Long courseid, Long userid) {
+		this.courseid = courseid;
+		this.userid = userid;
+	}
 
-    /**
-     * Method to set the courseid attribute of a MoodleCourseUser object.
-     * @param courseid Long
-     */
-    public void setCourseId(Long courseid) {
-        this.courseid=courseid;
-    }
+	/**
+	 * Method to set the courseid attribute of a MoodleCourseUser object.
+	 * 
+	 * @param courseid
+	 *            Long
+	 */
+	public void setCourseId(Long courseid) {
+		this.courseid = courseid;
+	}
 
-    /**
-     * Method to set the userid attribute of a MoodleCourseUser object.
-     * @param userid Long
-     */
-    public void setUserId(Long userid) {
-        this.userid=userid;
-    }
+	/**
+	 * Method to set the userid attribute of a MoodleCourseUser object.
+	 * 
+	 * @param userid
+	 *            Long
+	 */
+	public void setUserId(Long userid) {
+		this.userid = userid;
+	}
 
-    /**
-     * Method to get the courseid attribute of a MoodleCourseUser object.
-     * @return courseid long
-     */
-    public Long getCourseId() {
-        return courseid;
-    }
+	/**
+	 * Method to get the courseid attribute of a MoodleCourseUser object.
+	 * 
+	 * @return courseid long
+	 */
+	public Long getCourseId() {
+		return courseid;
+	}
 
-    /**
-     * Method to get the userid attribute of a MoodleCourseUser object.
-     * @return userid long
-     */
-    public long getUserId() {
-        return userid;
-    }
+	/**
+	 * Method to get the userid attribute of a MoodleCourseUser object.
+	 * 
+	 * @return userid long
+	 */
+	public long getUserId() {
+		return userid;
+	}
 }

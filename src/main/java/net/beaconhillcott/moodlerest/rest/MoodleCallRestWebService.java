@@ -18,14 +18,28 @@
 
 package net.beaconhillcott.moodlerest.rest;
 
-import java.io.*;
-import java.net.*;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.logging.*;
-import javax.xml.xpath.*;
+import java.net.URLEncoder;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
-import java.io.Serializable;
+
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
 
 /**
  * <p>
@@ -57,6 +71,8 @@ import java.io.Serializable;
  */
 public class MoodleCallRestWebService implements Serializable {
 
+	
+	private static final long serialVersionUID = -4168431784099970913L;
 	private static final String MOODLE_REST_VERSION = "Version  0.1.6";
 	private static final String MOODLE_EXTERNAL_REST_ENDPOINT = "/webservice/rest/server.php";
 	private static String token = null;

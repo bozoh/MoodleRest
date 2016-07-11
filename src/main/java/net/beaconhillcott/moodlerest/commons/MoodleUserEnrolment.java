@@ -31,7 +31,7 @@ public class MoodleUserEnrolment implements Serializable {
 	private Long timeStart = null;
 	private Long timeEnd = null;
 	private Integer suspend = null;
-
+ 
 	public MoodleUserEnrolment() {
 	}
 
@@ -89,7 +89,9 @@ public class MoodleUserEnrolment implements Serializable {
 		this.userId = userId;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -100,6 +102,5 @@ public class MoodleUserEnrolment implements Serializable {
 				.append(timeEnd).append(", suspend=").append(suspend).append("]");
 		return builder.toString();
 	}
-	
 
 }

@@ -13,20 +13,17 @@ import java.io.Serializable;
  * @author root
  */
 public enum DescriptionFormat implements Serializable {
-  
-  MOODLE(0),
-  HTML(1),
-  PLAIN(2),
-  MARKDOWN(4);
 
-  private Integer value;
+	MOODLE(0), HTML(1), PLAIN(2), MARKDOWN(4);
 
-  private DescriptionFormat(Integer value) {
-    this.value=value;
-  }
-  
-  public Integer toInt() {
-    return value;
-  }
-  
+	private Integer value;
+
+	private DescriptionFormat(Integer value) {
+		this.value = value;
+	}
+
+	public Integer toInt() {
+		return value;
+	}
+
 }

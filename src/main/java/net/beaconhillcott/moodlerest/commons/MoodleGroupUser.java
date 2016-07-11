@@ -25,7 +25,7 @@ import java.io.Serializable;
  *
  * @see MoodleRestGroup
  * @author Bill Antonia
- */
+ */ 
 public class MoodleGroupUser implements Serializable {
 
     private Long groupid=null;

@@ -14,101 +14,102 @@ import java.util.ArrayList;
  * @author root
  */
 public class MoodleModUserFlags implements Serializable {
-  private Long assignmentId=null;
-  private ArrayList<UserFlags> userFlags=null;
+	private Long assignmentId = null;
+	private ArrayList<UserFlags> userFlags = null;
 
-  public MoodleModUserFlags() {
-    userFlags=new ArrayList<UserFlags>();
-  }
-  
-  public MoodleModUserFlags(Long assignmentId) {
-    this.assignmentId=assignmentId;
-    userFlags=new ArrayList<UserFlags>();
-  }
+	public MoodleModUserFlags() {
+		userFlags = new ArrayList<UserFlags>();
+	}
 
-  public Long getAssignmentId() {
-    return assignmentId;
-  }
+	public MoodleModUserFlags(Long assignmentId) {
+		this.assignmentId = assignmentId;
+		userFlags = new ArrayList<UserFlags>();
+	}
 
-  public void setAssignmentId(Long assignmentId) {
-    this.assignmentId = assignmentId;
-  }
+	public Long getAssignmentId() {
+		return assignmentId;
+	}
 
-  public ArrayList<UserFlags> getUserFlags() {
-    return userFlags;
-  }
+	public void setAssignmentId(Long assignmentId) {
+		this.assignmentId = assignmentId;
+	}
 
-  public void setUserFlags(ArrayList<UserFlags> userFlags) {
-    this.userFlags = userFlags;
-  }
-  
-  public UserFlags newUserFlags() {
-    UserFlags userFlag=new UserFlags();
-    userFlags.add(userFlag);
-    return userFlag;
-  }
-  
-  public class UserFlags {
-    private Long id=null;
-    private Long userId=null;
-    private Boolean locked=null;
-    private Long extensionDueDate=null;
-    private String workflowState=null;
-    private Long allocatedMarker=null;
+	public ArrayList<UserFlags> getUserFlags() {
+		return userFlags;
+	}
 
-    public UserFlags() {}
+	public void setUserFlags(ArrayList<UserFlags> userFlags) {
+		this.userFlags = userFlags;
+	}
 
-    public UserFlags(Long id) {
-      this.id=id;
-    }
+	public UserFlags newUserFlags() {
+		UserFlags userFlag = new UserFlags();
+		userFlags.add(userFlag);
+		return userFlag;
+	}
 
-    public Long getId() {
-      return id;
-    }
+	public class UserFlags {
+		private Long id = null;
+		private Long userId = null;
+		private Boolean locked = null;
+		private Long extensionDueDate = null;
+		private String workflowState = null;
+		private Long allocatedMarker = null;
 
-    public void setId(Long id) {
-      this.id = id;
-    }
+		public UserFlags() {
+		}
 
-    public Long getUserId() {
-      return userId;
-    }
+		public UserFlags(Long id) {
+			this.id = id;
+		}
 
-    public void setUserId(Long userId) {
-      this.userId = userId;
-    }
+		public Long getId() {
+			return id;
+		}
 
-    public Boolean isLocked() {
-      return locked;
-    }
+		public void setId(Long id) {
+			this.id = id;
+		}
 
-    public void setLocked(Boolean locked) {
-      this.locked = locked;
-    }
+		public Long getUserId() {
+			return userId;
+		}
 
-    public Long getExtensionDueDate() {
-      return extensionDueDate;
-    }
+		public void setUserId(Long userId) {
+			this.userId = userId;
+		}
 
-    public void setExtensionDueDate(Long extensionDueDate) {
-      this.extensionDueDate = extensionDueDate;
-    }
+		public Boolean isLocked() {
+			return locked;
+		}
 
-    public String getWorkflowState() {
-      return workflowState;
-    }
+		public void setLocked(Boolean locked) {
+			this.locked = locked;
+		}
 
-    public void setWorkflowState(String workflowState) {
-      this.workflowState = workflowState;
-    }
+		public Long getExtensionDueDate() {
+			return extensionDueDate;
+		}
 
-    public Long getAllocatedMarker() {
-      return allocatedMarker;
-    }
+		public void setExtensionDueDate(Long extensionDueDate) {
+			this.extensionDueDate = extensionDueDate;
+		}
 
-    public void setAllocatedMarker(Long allocatedMarker) {
-      this.allocatedMarker = allocatedMarker;
-    }
-    
-  }
+		public String getWorkflowState() {
+			return workflowState;
+		}
+
+		public void setWorkflowState(String workflowState) {
+			this.workflowState = workflowState;
+		}
+
+		public Long getAllocatedMarker() {
+			return allocatedMarker;
+		}
+
+		public void setAllocatedMarker(Long allocatedMarker) {
+			this.allocatedMarker = allocatedMarker;
+		}
+
+	}
 }

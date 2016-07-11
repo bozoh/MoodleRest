@@ -18,15 +18,32 @@
 
 package net.beaconhillcott.moodlerest.rest;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.w3c.dom.NodeList;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.MarkReadMessage;
+import net.beaconhillcott.moodlerest.commons.MoodleBlockedUsers;
+import net.beaconhillcott.moodlerest.commons.MoodleContact;
+import net.beaconhillcott.moodlerest.commons.MoodleContactAction;
+import net.beaconhillcott.moodlerest.commons.MoodleContactState;
+import net.beaconhillcott.moodlerest.commons.MoodleMessage;
+import net.beaconhillcott.moodlerest.commons.MoodleRetrievedMessage;
+import net.beaconhillcott.moodlerest.commons.MoodleRetrievedMessages;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleUser;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCommentsException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestMessageException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestUserException;
 
 /**
  * <p>Class to call Moodle REST message web services.</p>

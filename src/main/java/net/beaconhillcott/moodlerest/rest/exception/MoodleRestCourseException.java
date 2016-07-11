@@ -26,19 +26,20 @@ import java.io.Serializable;
  */
 public class MoodleRestCourseException extends MoodleRestException implements Serializable {
 
-    /**
-     *
-     */
-    public static final String NO_LEGACY_CALL="No legacy call";
-    
-    MoodleRestCourseException() {}
+	/**
+	 *
+	 */
+	public static final String NO_LEGACY_CALL = "No legacy call";
 
-    MoodleRestCourseException(String msg) {
-        super(msg);
-    }
+	public MoodleRestCourseException() {
+	}
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
+	public MoodleRestCourseException(String msg) {
+		super(msg);
+	}
+
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
 }

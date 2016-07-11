@@ -18,214 +18,227 @@
 
 package net.beaconhillcott.moodlerest.commons;
 
-import java.util.ArrayList;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
  * @author Bill Antonia
  */
 public class MoodleWebService implements Serializable {
-  private String sitename=null;
-  private String username=null;
-  private String firstname=null;
-  private String lastname=null;
-  private String fullname=null;
-  private Long userid=null;
-  private String siteurl=null;
-  private String userpictureurl=null;
-  private ArrayList<Function> functions=null;
-  private Boolean downloadfiles=false;
+	private String sitename = null;
+	private String username = null;
+	private String firstname = null;
+	private String lastname = null;
+	private String fullname = null;
+	private Long userid = null;
+	private String siteurl = null;
+	private String userpictureurl = null;
+	private ArrayList<Function> functions = null;
+	private Boolean downloadfiles = false;
 
-  /**
-   *
-   */
-  public MoodleWebService() {}
+	/**
+	 *
+	 */
+	public MoodleWebService() {
+	}
 
-  /**
-   *
-   * @return
-   */
-  public String getSiteName() {
-      return sitename;
-  }
+	/**
+	 *
+	 * @return
+	 */
+	public String getSiteName() {
+		return sitename;
+	}
 
-  /**
-   *
-   * @return String
-   */
-  public String getUserName() {
-      return username;
-  }
+	/**
+	 *
+	 * @return String
+	 */
+	public String getUserName() {
+		return username;
+	}
 
-  /**
-   *
-   * @return String
-   */
-  public String getFirstName() {
-      return firstname;
-  }
+	/**
+	 *
+	 * @return String
+	 */
+	public String getFirstName() {
+		return firstname;
+	}
 
-  /**
-   *
-   * @return String
-   */
-  public String getLastName() {
-      return lastname;
-  }
+	/**
+	 *
+	 * @return String
+	 */
+	public String getLastName() {
+		return lastname;
+	}
 
-  /**
-   *
-   * @return String
-   */
-  public String getFullName() {
-      return fullname;
-  }
+	/**
+	 *
+	 * @return String
+	 */
+	public String getFullName() {
+		return fullname;
+	}
 
-  /**
-   *
-   * @return long
-   */
-  public Long getUserId() {
-      return userid;
-  }
+	/**
+	 *
+	 * @return long
+	 */
+	public Long getUserId() {
+		return userid;
+	}
 
-  /**
-   *
-   * @return String
-   */
-  public String getSiteURL() {
-      return siteurl;
-  }
+	/**
+	 *
+	 * @return String
+	 */
+	public String getSiteURL() {
+		return siteurl;
+	}
 
-  /**
-   *
-   * @return String
-   */
-  public String getUserPictureURL() {
-      return userpictureurl;
-  }
+	/**
+	 *
+	 * @return String
+	 */
+	public String getUserPictureURL() {
+		return userpictureurl;
+	}
 
-  /**
-   *
-   * @return ArrayList Function
-   */
-  public ArrayList<Function> getFunctions() {
-      return functions;
-  }
+	/**
+	 *
+	 * @return ArrayList Function
+	 */
+	public ArrayList<Function> getFunctions() {
+		return functions;
+	}
 
-  /**
-   *
-   * @return boolean
-   */
-  public Boolean canDownloadFiles() {
-      return downloadfiles;
-  }
+	/**
+	 *
+	 * @return boolean
+	 */
+	public Boolean canDownloadFiles() {
+		return downloadfiles;
+	}
 
-  /**
-   *
-   * @param name
-   * @param version
-   */
-  public void addFunction(String name, double version) {
-      if (functions==null) functions=new ArrayList<Function>();
-      functions.add(new Function(name, version));
-  }
-  /**
-   *
-   * @param function
-   */
-  public void addFunction(Function function) {
-      if (functions==null) functions=new ArrayList<Function>();
-      functions.add(function);
-  }
+	/**
+	 *
+	 * @param name
+	 * @param version
+	 */
+	public void addFunction(String name, double version) {
+		if (functions == null)
+			functions = new ArrayList<Function>();
+		functions.add(new Function(name, version));
+	}
 
-  /**
-   *
-   * @param sitename
-   */
-  public void setSiteName(String sitename) {
-      this.sitename=sitename;
-  }
+	/**
+	 *
+	 * @param function
+	 */
+	public void addFunction(Function function) {
+		if (functions == null)
+			functions = new ArrayList<Function>();
+		functions.add(function);
+	}
 
-  /**
-   *
-   * @param username
-   */
-  public void setUserName(String username) {
-      this.username=username;
-  }
+	/**
+	 *
+	 * @param sitename
+	 */
+	public void setSiteName(String sitename) {
+		this.sitename = sitename;
+	}
 
-  /**
-   *
-   * @param firstname
-   */
-  public void setFirstName(String firstname) {
-      this.firstname=firstname;
-  }
+	/**
+	 *
+	 * @param username
+	 */
+	public void setUserName(String username) {
+		this.username = username;
+	}
 
-  /**
-   * 
-   * @param lastname
-   */
-  public void setLastName(String lastname) {
-      this.lastname=lastname;
-  }
+	/**
+	 *
+	 * @param firstname
+	 */
+	public void setFirstName(String firstname) {
+		this.firstname = firstname;
+	}
 
-  /**
-   *
-   * @param fullname
-   */
-  public void setFullName(String fullname) {
-      this.fullname=fullname;
-  }
+	/**
+	 * 
+	 * @param lastname
+	 */
+	public void setLastName(String lastname) {
+		this.lastname = lastname;
+	}
 
-  /**
-   *
-   * @param userid
-   */
-  public void setUserId(Long userid) {
-      this.userid=userid;
-  }
+	/**
+	 *
+	 * @param fullname
+	 */
+	public void setFullName(String fullname) {
+		this.fullname = fullname;
+	}
 
-  /**
-   *
-   * @param siteurl
-   */
-  public void setSiteURL(String siteurl) {
-      this.siteurl=siteurl;
-  }
+	/**
+	 *
+	 * @param userid
+	 */
+	public void setUserId(Long userid) {
+		this.userid = userid;
+	}
 
-  /**
-   *
-   * @param userpictureurl
-   */
-  public void setUserPictureURL(String userpictureurl) {
-      this.userpictureurl=userpictureurl;
-  }
+	/**
+	 *
+	 * @param siteurl
+	 */
+	public void setSiteURL(String siteurl) {
+		this.siteurl = siteurl;
+	}
 
-  /**
-   *
-   * @param downloadfiles
-   */
-  public void setDownloadFiles(Boolean downloadfiles) {
-      this.downloadfiles=downloadfiles;
-  }
+	/**
+	 *
+	 * @param userpictureurl
+	 */
+	public void setUserPictureURL(String userpictureurl) {
+		this.userpictureurl = userpictureurl;
+	}
 
-  /**
-   *
-   * @param field
-   * @param value
-   */
-  public void setFunctionField(String field, String value) {
-      if (field.equals("sitename") && !value.equals("")) setSiteName(value);
-      if (field.equals("username") && !value.equals("")) setUserName(value);
-      if (field.equals("firstname") && !value.equals("")) setFirstName(value);
-      if (field.equals("lastname") && !value.equals("")) setLastName(value);
-      if (field.equals("fullname") && !value.equals("")) setFullName(value);
-      if (field.equals("userid") && !value.equals("")) setUserId(Long.valueOf(value));
-      if (field.equals("siteurl") && !value.equals("")) setSiteURL(value);
-      if (field.equals("userpictureurl") && !value.equals("")) setUserPictureURL(value);
-      if (field.equals("downloadfiles") && !value.equals("")) setDownloadFiles(value.equals("1")?true:false);
-  }
+	/**
+	 *
+	 * @param downloadfiles
+	 */
+	public void setDownloadFiles(Boolean downloadfiles) {
+		this.downloadfiles = downloadfiles;
+	}
+
+	/**
+	 *
+	 * @param field
+	 * @param value
+	 */
+	public void setFunctionField(String field, String value) {
+		if (field.equals("sitename") && !value.equals(""))
+			setSiteName(value);
+		if (field.equals("username") && !value.equals(""))
+			setUserName(value);
+		if (field.equals("firstname") && !value.equals(""))
+			setFirstName(value);
+		if (field.equals("lastname") && !value.equals(""))
+			setLastName(value);
+		if (field.equals("fullname") && !value.equals(""))
+			setFullName(value);
+		if (field.equals("userid") && !value.equals(""))
+			setUserId(Long.valueOf(value));
+		if (field.equals("siteurl") && !value.equals(""))
+			setSiteURL(value);
+		if (field.equals("userpictureurl") && !value.equals(""))
+			setUserPictureURL(value);
+		if (field.equals("downloadfiles") && !value.equals(""))
+			setDownloadFiles(value.equals("1") ? true : false);
+	}
 }

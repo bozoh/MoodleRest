@@ -13,18 +13,19 @@ import java.io.Serializable;
  * @author root
  */
 public class MoodleRestCompletionException extends MoodleRestException implements Serializable {
-  
-  public static final String NO_LEGACY_CALL="No legacy call";
-    
-  MoodleRestCompletionException() {}
 
-  MoodleRestCompletionException(String msg) {
-    super(msg);
-  }
+	public static final String NO_LEGACY_CALL = "No legacy call";
 
-  @Override
-  public String getMessage() {
-    return super.getMessage();
-  }
-    
+	public MoodleRestCompletionException() {
+	}
+
+	public MoodleRestCompletionException(String msg) {
+		super(msg);
+	}
+
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
+
 }

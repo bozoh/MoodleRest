@@ -12,35 +12,35 @@ import java.util.ArrayList;
  */
 public class CourseEnrolledUserCapability {
 
-  private Long courseId=null;
-  private ArrayList<Capability> capabilities=null;
-  
-  public CourseEnrolledUserCapability() {
-    this.courseId=new Long(0);
-    this.capabilities=new ArrayList<Capability>();
-  }
+	private Long courseId = null;
+	private ArrayList<Capability> capabilities = null;
 
-  public CourseEnrolledUserCapability(Long courseId) {
-    this.courseId=courseId;
-  }
+	public CourseEnrolledUserCapability() {
+		this.courseId = new Long(0);
+		this.capabilities = new ArrayList<Capability>();
+	}
 
-  public Long getCourseId() {
-    return courseId;
-  }
+	public CourseEnrolledUserCapability(Long courseId) {
+		this.courseId = courseId;
+	}
 
-  public void setCourseId(Long courseId) {
-    this.courseId = courseId;
-  }
+	public Long getCourseId() {
+		return courseId;
+	}
 
-  public ArrayList<Capability> getCapabilities() {
-    return capabilities;
-  }
+	public void setCourseId(Long courseId) {
+		this.courseId = courseId;
+	}
 
-  public void setCapabilities(ArrayList<Capability> capabilities) {
-    this.capabilities = capabilities;
-  }
-  
-  public void addCapability(Capability capability) {
-    this.capabilities.add(capability);
-  }
+	public ArrayList<Capability> getCapabilities() {
+		return capabilities;
+	}
+
+	public void setCapabilities(ArrayList<Capability> capabilities) {
+		this.capabilities = capabilities;
+	}
+
+	public void addCapability(Capability capability) {
+		this.capabilities.add(capability);
+	}
 }

@@ -14,27 +14,26 @@ import java.util.ArrayList;
  * @author root
  */
 public class MoodleGroups implements Serializable {
-  private ArrayList<MoodleGroup> groups=null;
-  private ArrayList<MoodleWarning> warnings=null;
+	private ArrayList<MoodleGroup> groups = null;
+	private ArrayList<MoodleWarning> warnings = null;
 
-  public MoodleGroups() {
-  }
+	public MoodleGroups() {
+	}
 
-  public ArrayList<MoodleGroup> getGroups() {
-    return groups;
-  }
+	public ArrayList<MoodleGroup> getGroups() {
+		return groups;
+	}
 
-  public void setGroups(ArrayList<MoodleGroup> groups) {
-    this.groups = groups;
-  }
+	public void setGroups(ArrayList<MoodleGroup> groups) {
+		this.groups = groups;
+	}
 
-  public ArrayList<MoodleWarning> getWarnings() {
-    return warnings;
-  }
+	public ArrayList<MoodleWarning> getWarnings() {
+		return warnings;
+	}
 
-  public void setWarnings(ArrayList<MoodleWarning> warnings) {
-    this.warnings = warnings;
-  }
-  
-  
+	public void setWarnings(ArrayList<MoodleWarning> warnings) {
+		this.warnings = warnings;
+	}
+
 }

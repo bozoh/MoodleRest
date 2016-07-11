@@ -258,9 +258,9 @@ public class MoodleCategory implements Serializable, Comparable<MoodleCategory> 
 		this.recursive = recursive;
 	}
 
-	
-	
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -276,7 +276,9 @@ public class MoodleCategory implements Serializable, Comparable<MoodleCategory> 
 		return builder.toString();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -301,7 +303,9 @@ public class MoodleCategory implements Serializable, Comparable<MoodleCategory> 
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override

@@ -14,26 +14,27 @@ import java.util.ArrayList;
  * @author root
  */
 public class ModAssignGrades implements Serializable {
-  
-  private ArrayList<ModAssignGrade> grades=null;
 
-  public ModAssignGrades() {
-  }
+	private ArrayList<ModAssignGrade> grades = null;
 
-  public ModAssignGrades(ArrayList<ModAssignGrade> grades) {
-    this.grades = grades;
-  }
+	public ModAssignGrades() {
+	}
 
-  public ArrayList<ModAssignGrade> getGrades() {
-    return grades;
-  }
+	public ModAssignGrades(ArrayList<ModAssignGrade> grades) {
+		this.grades = grades;
+	}
 
-  public void setGrades(ArrayList<ModAssignGrade> grades) {
-    this.grades = grades;
-  }
-  
-  public void addGrade(ModAssignGrade grade) {
-    if (grades==null) grades=new ArrayList<ModAssignGrade>();
-    grades.add(grade);
-  }
+	public ArrayList<ModAssignGrade> getGrades() {
+		return grades;
+	}
+
+	public void setGrades(ArrayList<ModAssignGrade> grades) {
+		this.grades = grades;
+	}
+
+	public void addGrade(ModAssignGrade grade) {
+		if (grades == null)
+			grades = new ArrayList<ModAssignGrade>();
+		grades.add(grade);
+	}
 }

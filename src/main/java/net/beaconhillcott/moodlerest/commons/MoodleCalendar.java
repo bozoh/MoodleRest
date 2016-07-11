@@ -24,234 +24,254 @@ import java.io.Serializable;
  * @author root
  */
 public class MoodleCalendar implements Serializable {
-  
-  private Integer id=null;
-  private String modulename=null;
-  private Long userid=null;
-  private Integer repeatid=null;
-  private Integer instance=null;
-  private String uuid=null;
-  private Long timemodified=null;
-  private Integer subscriptionid=null;
-  private String name=null; //event name
-  private String description=null; //Description
-  private Integer format=null; // int  Default to "1" description format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN)
-  private Integer courseid=null;
-  private Integer groupid=null;
-  private Integer repeats=null; // Default to "0" number of repeats
-  private String eventtype=null; // Default to "user" Event type
-  private Long timestart=null; // Default to "1392892303" timestart
-  private Integer timeduration=null; // Default to "0" time duration
-  private Integer visible=null; // Default to "1" visible
-  private Integer sequence=null; // Default to "1" sequence
-  
-  public static final Integer DESCRIPTION_FORMAT_MOODLE=0;
-  public static final Integer DESCRIPTION_FORMAT_HTML=1;
-  public static final Integer DESCRIPTION_FORMAT_PLAIN=2;
-  public static final Integer DESCRIPTION_FORMAT_MARKDOWN=4;
-  
-  public static final int GET_OPTION_USEREVENTS_DEFAULT=1;
-  public static final int GET_OPTION_SITEEVENTS_DEFAULT=1;
-  public static final long GET_OPTION_TIMESTART_DEFAULT=0;
-  public static final long GET_OPTION_TIMEEND_DEFAULT=1392892303;
-  public static final int GET_OPTION_IGNOREHIDDEN_DEFAULT=1;
-  
 
-  public MoodleCalendar() {
-  }
-  
-  public MoodleCalendar(String name) {
-    this.name = name;
-  }
-  
-  public void setMoodleCalendarField(String nodeName, String content) {
-    if (nodeName.equals("id")) setId(Integer.parseInt(content.trim()));
-    if (nodeName.equals("modulename")) setModuleName(content);
-    if (nodeName.equals("userid") && !content.isEmpty()) setUserId(Long.parseLong(content.trim()));
-    if (nodeName.equals("repeatid") && !content.isEmpty()) setRepeatId(Integer.parseInt(content.trim()));
-    if (nodeName.equals("instance") && !content.isEmpty()) setInstance(Integer.parseInt(content.trim()));
-    if (nodeName.equals("uuid")) setUUId(content);
-    if (nodeName.equals("timemodified") && !content.isEmpty()) setTimeModified(Long.parseLong(content.trim()));
-    if (nodeName.equals("subscriptionid") && !content.isEmpty()) setSubscriptionId(Integer.parseInt(content.trim()));
-    if (nodeName.equals("name")) setName(content);
-    if (nodeName.equals("description")) setDescription(content);
-    if (nodeName.equals("format") && !content.isEmpty()) setFormat(Integer.parseInt(content.trim()));
-    if (nodeName.equals("courseid") && !content.isEmpty()) setCourseId(Integer.parseInt(content.trim()));
-    if (nodeName.equals("groupid") && !content.isEmpty()) setGroupId(Integer.parseInt(content));
-    if (nodeName.equals("repeats") && !content.isEmpty()) setRepeats(Integer.parseInt(content));
-    if (nodeName.equals("eventtype")) setEventtype(content);
-    if (nodeName.equals("timestart") && !content.isEmpty()) setTimestart(Long.parseLong(content.trim()));
-    if (nodeName.equals("timeduration") && !content.isEmpty()) setTimeduration(Integer.parseInt(content));
-    if (nodeName.equals("visible") && !content.isEmpty()) setVisible(Integer.parseInt(content.trim()));
-    if (nodeName.equals("sequence") && !content.isEmpty()) setSequence(Integer.parseInt(content));
-  }
+	private Integer id = null;
+	private String modulename = null;
+	private Long userid = null;
+	private Integer repeatid = null;
+	private Integer instance = null;
+	private String uuid = null;
+	private Long timemodified = null;
+	private Integer subscriptionid = null;
+	private String name = null; // event name
+	private String description = null; // Description
+	private Integer format = null; // int Default to "1" description format (1 =
+									// HTML, 0 = MOODLE, 2 = PLAIN or 4 =
+									// MARKDOWN)
+	private Integer courseid = null;
+	private Integer groupid = null;
+	private Integer repeats = null; // Default to "0" number of repeats
+	private String eventtype = null; // Default to "user" Event type
+	private Long timestart = null; // Default to "1392892303" timestart
+	private Integer timeduration = null; // Default to "0" time duration
+	private Integer visible = null; // Default to "1" visible
+	private Integer sequence = null; // Default to "1" sequence
 
-  public Integer getCourseId() {
-    return courseid;
-  }
+	public static final Integer DESCRIPTION_FORMAT_MOODLE = 0;
+	public static final Integer DESCRIPTION_FORMAT_HTML = 1;
+	public static final Integer DESCRIPTION_FORMAT_PLAIN = 2;
+	public static final Integer DESCRIPTION_FORMAT_MARKDOWN = 4;
 
-  public void setCourseId(Integer courseid) {
-    this.courseid = courseid;
-  }
+	public static final int GET_OPTION_USEREVENTS_DEFAULT = 1;
+	public static final int GET_OPTION_SITEEVENTS_DEFAULT = 1;
+	public static final long GET_OPTION_TIMESTART_DEFAULT = 0;
+	public static final long GET_OPTION_TIMEEND_DEFAULT = 1392892303;
+	public static final int GET_OPTION_IGNOREHIDDEN_DEFAULT = 1;
 
-  public String getDescription() {
-    return description;
-  }
+	public MoodleCalendar() {
+	}
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+	public MoodleCalendar(String name) {
+		this.name = name;
+	}
 
-  public String getEventtype() {
-    return eventtype;
-  }
+	public void setMoodleCalendarField(String nodeName, String content) {
+		if (nodeName.equals("id"))
+			setId(Integer.parseInt(content.trim()));
+		if (nodeName.equals("modulename"))
+			setModuleName(content);
+		if (nodeName.equals("userid") && !content.isEmpty())
+			setUserId(Long.parseLong(content.trim()));
+		if (nodeName.equals("repeatid") && !content.isEmpty())
+			setRepeatId(Integer.parseInt(content.trim()));
+		if (nodeName.equals("instance") && !content.isEmpty())
+			setInstance(Integer.parseInt(content.trim()));
+		if (nodeName.equals("uuid"))
+			setUUId(content);
+		if (nodeName.equals("timemodified") && !content.isEmpty())
+			setTimeModified(Long.parseLong(content.trim()));
+		if (nodeName.equals("subscriptionid") && !content.isEmpty())
+			setSubscriptionId(Integer.parseInt(content.trim()));
+		if (nodeName.equals("name"))
+			setName(content);
+		if (nodeName.equals("description"))
+			setDescription(content);
+		if (nodeName.equals("format") && !content.isEmpty())
+			setFormat(Integer.parseInt(content.trim()));
+		if (nodeName.equals("courseid") && !content.isEmpty())
+			setCourseId(Integer.parseInt(content.trim()));
+		if (nodeName.equals("groupid") && !content.isEmpty())
+			setGroupId(Integer.parseInt(content));
+		if (nodeName.equals("repeats") && !content.isEmpty())
+			setRepeats(Integer.parseInt(content));
+		if (nodeName.equals("eventtype"))
+			setEventtype(content);
+		if (nodeName.equals("timestart") && !content.isEmpty())
+			setTimestart(Long.parseLong(content.trim()));
+		if (nodeName.equals("timeduration") && !content.isEmpty())
+			setTimeduration(Integer.parseInt(content));
+		if (nodeName.equals("visible") && !content.isEmpty())
+			setVisible(Integer.parseInt(content.trim()));
+		if (nodeName.equals("sequence") && !content.isEmpty())
+			setSequence(Integer.parseInt(content));
+	}
 
-  public void setEventtype(String eventtype) {
-    this.eventtype = eventtype;
-  }
+	public Integer getCourseId() {
+		return courseid;
+	}
 
-  public Integer getFormat() {
-    return format;
-  }
+	public void setCourseId(Integer courseid) {
+		this.courseid = courseid;
+	}
 
-  public void setFormat(Integer format) {
-    this.format = format;
-  }
+	public String getDescription() {
+		return description;
+	}
 
-  public Integer getGroupId() {
-    return groupid;
-  }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-  public void setGroupId(Integer groupid) {
-    this.groupid = groupid;
-  }
+	public String getEventtype() {
+		return eventtype;
+	}
 
-  public String getName() {
-    return name;
-  }
+	public void setEventtype(String eventtype) {
+		this.eventtype = eventtype;
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	public Integer getFormat() {
+		return format;
+	}
 
-  public Integer getRepeats() {
-    return repeats;
-  }
+	public void setFormat(Integer format) {
+		this.format = format;
+	}
 
-  public void setRepeats(Integer repeats) {
-    this.repeats = repeats;
-  }
+	public Integer getGroupId() {
+		return groupid;
+	}
 
-  public Integer getSequence() {
-    return sequence;
-  }
+	public void setGroupId(Integer groupid) {
+		this.groupid = groupid;
+	}
 
-  public void setSequence(Integer sequence) {
-    this.sequence = sequence;
-  }
+	public String getName() {
+		return name;
+	}
 
-  public Integer getTimeduration() {
-    return timeduration;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-  public void setTimeduration(Integer timeduration) {
-    this.timeduration = timeduration;
-  }
+	public Integer getRepeats() {
+		return repeats;
+	}
 
-  public Long getTimestart() {
-    return timestart;
-  }
+	public void setRepeats(Integer repeats) {
+		this.repeats = repeats;
+	}
 
-  public void setTimestart(Long timestart) {
-    this.timestart = timestart;
-  }
+	public Integer getSequence() {
+		return sequence;
+	}
 
-  public Integer getVisible() {
-    return visible;
-  }
+	public void setSequence(Integer sequence) {
+		this.sequence = sequence;
+	}
 
-  public void setVisible(Integer visible) {
-    this.visible = visible;
-  }
+	public Integer getTimeduration() {
+		return timeduration;
+	}
 
-  public String getModuleName() {
-    return modulename;
-  }
+	public void setTimeduration(Integer timeduration) {
+		this.timeduration = timeduration;
+	}
 
-  public void setModuleName(String modulename) {
-    this.modulename = modulename;
-  }
+	public Long getTimestart() {
+		return timestart;
+	}
 
-  public Integer getCourseid() {
-    return courseid;
-  }
+	public void setTimestart(Long timestart) {
+		this.timestart = timestart;
+	}
 
-  public void setCourseid(Integer courseid) {
-    this.courseid = courseid;
-  }
+	public Integer getVisible() {
+		return visible;
+	}
 
-  public Integer getGroupid() {
-    return groupid;
-  }
+	public void setVisible(Integer visible) {
+		this.visible = visible;
+	}
 
-  public void setGroupid(Integer groupid) {
-    this.groupid = groupid;
-  }
+	public String getModuleName() {
+		return modulename;
+	}
 
-  public Integer getId() {
-    return id;
-  }
+	public void setModuleName(String modulename) {
+		this.modulename = modulename;
+	}
 
-  public void setId(Integer id) {
-    this.id = id;
-  }
+	public Integer getCourseid() {
+		return courseid;
+	}
 
-  public Integer getInstance() {
-    return instance;
-  }
+	public void setCourseid(Integer courseid) {
+		this.courseid = courseid;
+	}
 
-  public void setInstance(Integer instance) {
-    this.instance = instance;
-  }
+	public Integer getGroupid() {
+		return groupid;
+	}
 
-  public Integer getRepeatId() {
-    return repeatid;
-  }
+	public void setGroupid(Integer groupid) {
+		this.groupid = groupid;
+	}
 
-  public void setRepeatId(Integer repeatid) {
-    this.repeatid = repeatid;
-  }
+	public Integer getId() {
+		return id;
+	}
 
-  public Integer getSubscriptionId() {
-    return subscriptionid;
-  }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-  public void setSubscriptionId(Integer subscriptionid) {
-    this.subscriptionid = subscriptionid;
-  }
+	public Integer getInstance() {
+		return instance;
+	}
 
-  public Long getTimeModified() {
-    return timemodified;
-  }
+	public void setInstance(Integer instance) {
+		this.instance = instance;
+	}
 
-  public void setTimeModified(Long timemodified) {
-    this.timemodified = timemodified;
-  }
+	public Integer getRepeatId() {
+		return repeatid;
+	}
 
-  public Long getUserId() {
-    return userid;
-  }
+	public void setRepeatId(Integer repeatid) {
+		this.repeatid = repeatid;
+	}
 
-  public void setUserId(Long userid) {
-    this.userid = userid;
-  }
+	public Integer getSubscriptionId() {
+		return subscriptionid;
+	}
 
-  public String getUUId() {
-    return uuid;
-  }
+	public void setSubscriptionId(Integer subscriptionid) {
+		this.subscriptionid = subscriptionid;
+	}
 
-  public void setUUId(String uuid) {
-    this.uuid = uuid;
-  }
-  
+	public Long getTimeModified() {
+		return timemodified;
+	}
+
+	public void setTimeModified(Long timemodified) {
+		this.timemodified = timemodified;
+	}
+
+	public Long getUserId() {
+		return userid;
+	}
+
+	public void setUserId(Long userid) {
+		this.userid = userid;
+	}
+
+	public String getUUId() {
+		return uuid;
+	}
+
+	public void setUUId(String uuid) {
+		this.uuid = uuid;
+	}
+
 }

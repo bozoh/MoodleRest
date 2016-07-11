@@ -14,25 +14,26 @@ import java.util.ArrayList;
  * @author root
  */
 public class ModAssignRubric implements Serializable {
-  private ArrayList<ModAssignRubricCriteria> criteria=null;
+	private ArrayList<ModAssignRubricCriteria> criteria = null;
 
-  public ModAssignRubric() {
-  }
+	public ModAssignRubric() {
+	}
 
-  public ModAssignRubric(ArrayList<ModAssignRubricCriteria> criteria) {
-    this.criteria = criteria;
-  }
+	public ModAssignRubric(ArrayList<ModAssignRubricCriteria> criteria) {
+		this.criteria = criteria;
+	}
 
-  public ArrayList<ModAssignRubricCriteria> getCriteria() {
-    return criteria;
-  }
+	public ArrayList<ModAssignRubricCriteria> getCriteria() {
+		return criteria;
+	}
 
-  public void setCriteria(ArrayList<ModAssignRubricCriteria> criteria) {
-    this.criteria = criteria;
-  }
-  
-  public void addRubricCriteria(ModAssignRubricCriteria rubricCriteria) {
-    if (criteria==null) criteria=new ArrayList<ModAssignRubricCriteria>();
-    criteria.add(rubricCriteria);
-  }
+	public void setCriteria(ArrayList<ModAssignRubricCriteria> criteria) {
+		this.criteria = criteria;
+	}
+
+	public void addRubricCriteria(ModAssignRubricCriteria rubricCriteria) {
+		if (criteria == null)
+			criteria = new ArrayList<ModAssignRubricCriteria>();
+		criteria.add(rubricCriteria);
+	}
 }

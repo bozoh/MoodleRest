@@ -23,8 +23,9 @@ public class MoodleDuplicatedCourse {
     if (value!=null) {
       if (name.equals("id")) {
         if (!value.isEmpty()) {
-          if (name.equals("id")) setId(Long.parseLong(value));
-        }
+					if (name.equals("id"))
+						setId(Long.parseLong(value));
+				}
       } else {
         if (name.equals("shortname")) {
           if (name.equals("shortname")) setShortName(value);

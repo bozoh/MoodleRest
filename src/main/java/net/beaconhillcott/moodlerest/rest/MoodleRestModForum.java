@@ -7,7 +7,17 @@ package net.beaconhillcott.moodlerest.rest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+
 import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.ModCourseForum;
+import net.beaconhillcott.moodlerest.commons.ModForumDiscussion;
+import net.beaconhillcott.moodlerest.commons.MoodleListStatus;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCourseException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestModAssignException;
 
 /**
  *

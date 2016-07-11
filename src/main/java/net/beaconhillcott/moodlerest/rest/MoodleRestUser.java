@@ -18,13 +18,36 @@
 
 package net.beaconhillcott.moodlerest.rest;
 
-import java.io.*;
-import java.net.*;
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Vector;
-import java.util.logging.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.Criteria;
+import net.beaconhillcott.moodlerest.commons.MoodleListStatus;
+import net.beaconhillcott.moodlerest.commons.MoodleRemoveDevice;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleUser;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.commons.UserCustomField;
+import net.beaconhillcott.moodlerest.commons.UserEnrolledCourse;
+import net.beaconhillcott.moodlerest.commons.UserFieldSearch;
+import net.beaconhillcott.moodlerest.commons.UserGroup;
+import net.beaconhillcott.moodlerest.commons.UserList;
+import net.beaconhillcott.moodlerest.commons.UserPreference;
+import net.beaconhillcott.moodlerest.commons.UserRole;
+import net.beaconhillcott.moodlerest.commos.exception.MoodleUserRoleException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCalendarException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCourseException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestModAssignException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestUserException;
 
 /**
  * <p>
@@ -35,6 +58,7 @@ import org.w3c.dom.NodeList;
  * @author Bill Antonia
  * @see MoodleUser
  */
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class MoodleRestUser implements Serializable {
 
 	/**
@@ -79,6 +103,7 @@ public class MoodleRestUser implements Serializable {
 	 * @throws MoodleRestUserException
 	 * @throws MoodleRestException
 	 */
+
 	public static MoodleUser[] createUsers(MoodleUser[] user) throws MoodleRestUserException, MoodleRestException {
 		Hashtable hash = new Hashtable();
 		String functionCall = MoodleCallRestWebService.isLegacy() ? MoodleServices.MOODLE_USER_CREATE_USERS.toString()
@@ -242,6 +267,7 @@ public class MoodleRestUser implements Serializable {
 
 	public MoodleUser[] __createUsers(String url, String token, MoodleUser[] user)
 			throws MoodleRestUserException, MoodleRestException {
+
 		Hashtable hash = new Hashtable();
 		String functionCall = MoodleCallRestWebService.isLegacy() ? MoodleServices.MOODLE_USER_CREATE_USERS.toString()
 				: MoodleServices.CORE_USER_CREATE_USERS.toString();
@@ -1804,6 +1830,10 @@ public class MoodleRestUser implements Serializable {
 			throws MoodleRestUserException, UnsupportedEncodingException, MoodleRestException {
 		if (MoodleCallRestWebService.isLegacy())
 			throw new MoodleRestCalendarException(MoodleRestException.NO_LEGACY);
+		
+		if (values == null)
+			throw new MoodleRestUserException();
+
 		Vector v = new Vector();
 		MoodleUser user;
 		// boolean processed=false;
@@ -1824,8 +1854,6 @@ public class MoodleRestUser implements Serializable {
 			data.append("&").append(URLEncoder.encode("field", MoodleServices.ENCODING.toString())).append("=")
 					.append(field.toString());
 			for (int i = 0; i < values.length; i++) {
-				if (values == null)
-					throw new MoodleRestUserException();
 				data.append("&").append(URLEncoder.encode("values[" + i + "]", MoodleServices.ENCODING.toString()))
 						.append("=").append(values[i]);
 			}
@@ -1943,6 +1971,8 @@ public class MoodleRestUser implements Serializable {
 			throws MoodleRestUserException, UnsupportedEncodingException, MoodleRestException {
 		if (MoodleCallRestWebService.isLegacy())
 			throw new MoodleRestCalendarException(MoodleRestException.NO_LEGACY);
+		if (values == null)
+			throw new MoodleRestUserException();
 		Vector v = new Vector();
 		MoodleUser user;
 		// boolean processed=false;
@@ -1961,8 +1991,7 @@ public class MoodleRestUser implements Serializable {
 			data.append("&").append(URLEncoder.encode("field", MoodleServices.ENCODING.toString())).append("=")
 					.append(field.toString());
 			for (int i = 0; i < values.length; i++) {
-				if (values == null)
-					throw new MoodleRestUserException();
+				
 				data.append("&").append(URLEncoder.encode("values[" + i + "]", MoodleServices.ENCODING.toString()))
 						.append("=").append(values[i]);
 			}

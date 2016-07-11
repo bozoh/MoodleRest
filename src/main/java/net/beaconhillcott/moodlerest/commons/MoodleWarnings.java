@@ -13,21 +13,22 @@ import java.util.ArrayList;
  * @author Bill Antonia
  */
 public class MoodleWarnings {
-  private ArrayList<MoodleWarning> warnings=null;
+	private ArrayList<MoodleWarning> warnings = null;
 
-  public MoodleWarnings() {
-  }
+	public MoodleWarnings() {
+	}
 
-  public ArrayList<MoodleWarning> getWarnings() {
-    return warnings;
-  }
+	public ArrayList<MoodleWarning> getWarnings() {
+		return warnings;
+	}
 
-  public void setWarnings(ArrayList<MoodleWarning> warnings) {
-    this.warnings = warnings;
-  }
-  
-  public void addWarning(MoodleWarning warning) {
-    if (warnings==null) warnings=new ArrayList<MoodleWarning>();
-    warnings.add(warning);
-  }
+	public void setWarnings(ArrayList<MoodleWarning> warnings) {
+		this.warnings = warnings;
+	}
+
+	public void addWarning(MoodleWarning warning) {
+		if (warnings == null)
+			warnings = new ArrayList<MoodleWarning>();
+		warnings.add(warning);
+	}
 }

@@ -27,68 +27,120 @@ import java.util.ArrayList;
  */
 public class MoodleModAssignGrades implements Serializable {
 
-  private Long assignmentId=null;
-  private ArrayList<Grade> grades=null;
-  
-  public MoodleModAssignGrades() { grades=new ArrayList<Grade>();}
-  public MoodleModAssignGrades(Long assignmentId) { this.assignmentId=assignmentId; grades=new ArrayList<Grade>();}
-  
-  public Grade newGrade() {
-    if (grades==null) {
-      grades=new ArrayList<Grade>();
-    }
-    Grade grade=new Grade();
-    grades.add(grade);
-    return grade;
-  }
+	private Long assignmentId = null;
+	private ArrayList<Grade> grades = null;
 
-  public Long getAssignmentId() {
-    return assignmentId;
-  }
+	public MoodleModAssignGrades() {
+		grades = new ArrayList<Grade>();
+	}
 
-  public void setAssignmentId(Long assignmentId) {
-    this.assignmentId = assignmentId;
-  }
+	public MoodleModAssignGrades(Long assignmentId) {
+		this.assignmentId = assignmentId;
+		grades = new ArrayList<Grade>();
+	}
 
-  public ArrayList<Grade> getGrades() {
-    return grades;
-  }
+	public Grade newGrade() {
+		if (grades == null) {
+			grades = new ArrayList<Grade>();
+		}
+		Grade grade = new Grade();
+		grades.add(grade);
+		return grade;
+	}
 
-  public void setGrades(ArrayList<Grade> grades) {
-    this.grades = grades;
-  }
-  
-  public class Grade {
-    private Long id=null;
-    private Long userId=null;
-    private Long timeCreated=null;
-    private Long timeModified=null;
-    private Long grader=null;
-    private String grade=null;
-    
-    public void setId(Long id) { this.id=id; }
-    public void setUserId(Long userId) { this.userId=userId; }
-    public void setTimeCreated(Long timeCreated) { this.timeCreated=timeCreated; }
-    public void setTimeModified(Long timeModified) { this.timeModified=timeModified; }
-    public void setGrader(Long grader) { this.grader=grader; }
-    public void setGrade(String grade) { this.grade=grade; }
+	public Long getAssignmentId() {
+		return assignmentId;
+	}
 
-    public Long getId() { return id; }
-    public Long getUserId() { return userId; }
-    public Long getTimeCreated() { return timeCreated; }
-    public Long getTimeModified() { return timeModified; }
-    public Long getGrader() { return grader; }
-    public String getGrade() { return grade; }
+	public void setAssignmentId(Long assignmentId) {
+		this.assignmentId = assignmentId;
+	}
 
-    public void setFieldValue(String field, String value) {
-      if (field!=null && !field.isEmpty()) {
-        if (field.equals("id")) { setId(Long.parseLong(value)); }
-        if (field.equals("userid")) { setUserId(Long.parseLong(value)); }
-        if (field.equals("timecreated")) { setTimeCreated(Long.parseLong(value)); }
-        if (field.equals("timemodified")) { setTimeModified(Long.parseLong(value)); }
-        if (field.equals("grader")) { setGrader(Long.parseLong(value)); }
-        if (field.equals("grade")) { setGrade(value); }
-      }
-    }
-  }
+	public ArrayList<Grade> getGrades() {
+		return grades;
+	}
+
+	public void setGrades(ArrayList<Grade> grades) {
+		this.grades = grades;
+	}
+
+	public class Grade {
+		private Long id = null;
+		private Long userId = null;
+		private Long timeCreated = null;
+		private Long timeModified = null;
+		private Long grader = null;
+		private String grade = null;
+
+		public void setId(Long id) {
+			this.id = id;
+		}
+
+		public void setUserId(Long userId) {
+			this.userId = userId;
+		}
+
+		public void setTimeCreated(Long timeCreated) {
+			this.timeCreated = timeCreated;
+		}
+
+		public void setTimeModified(Long timeModified) {
+			this.timeModified = timeModified;
+		}
+
+		public void setGrader(Long grader) {
+			this.grader = grader;
+		}
+
+		public void setGrade(String grade) {
+			this.grade = grade;
+		}
+
+		public Long getId() {
+			return id;
+		}
+
+		public Long getUserId() {
+			return userId;
+		}
+
+		public Long getTimeCreated() {
+			return timeCreated;
+		}
+
+		public Long getTimeModified() {
+			return timeModified;
+		}
+
+		public Long getGrader() {
+			return grader;
+		}
+
+		public String getGrade() {
+			return grade;
+		}
+
+		public void setFieldValue(String field, String value) {
+			if (field != null && !field.isEmpty()) {
+				if (field.equals("id")) {
+					setId(Long.parseLong(value));
+				}
+				if (field.equals("userid")) {
+					setUserId(Long.parseLong(value));
+				}
+				if (field.equals("timecreated")) {
+					setTimeCreated(Long.parseLong(value));
+				}
+				if (field.equals("timemodified")) {
+					setTimeModified(Long.parseLong(value));
+				}
+				if (field.equals("grader")) {
+					setGrader(Long.parseLong(value));
+				}
+				if (field.equals("grade")) {
+					setGrade(value);
+				}
+			}
+		}
+	}
 }

@@ -10,15 +10,24 @@ import java.io.Serializable;
  *
  * @author root
  */
-class MoodleRestCohortException extends MoodleRestException implements Serializable {
-  
-  public static final String INCONSISTENT_DATA_PARSE="Returned data not in correct order";
+public class MoodleRestCohortException extends MoodleRestException implements Serializable {
 
-  public MoodleRestCohortException(String string) {
-  }
+	public static final String INCONSISTENT_DATA_PARSE = "Returned data not in correct order";
 
-  MoodleRestCohortException() {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-  }
-  
+	public MoodleRestCohortException(String string) {
+	}
+
+	public MoodleRestCohortException() {
+		throw new UnsupportedOperationException("Not supported yet."); // To
+																		// change
+																		// body
+																		// of
+																		// generated
+																		// methods,
+																		// choose
+																		// Tools
+																		// |
+																		// Templates.
+	}
+
 }

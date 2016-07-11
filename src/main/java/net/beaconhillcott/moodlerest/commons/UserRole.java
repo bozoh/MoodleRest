@@ -20,6 +20,8 @@ package net.beaconhillcott.moodlerest.commons;
 
 import java.io.Serializable;
 
+import net.beaconhillcott.moodlerest.commos.exception.MoodleUserRoleException;
+
 /**
  *
  * @author Bill Antonia
@@ -110,6 +112,7 @@ public final class UserRole implements Serializable {
   /**
    *
    * @param roleid
+ * @throws MoodleUserRoleException 
    */
   public void setRoleId(Long roleid) throws MoodleUserRoleException {
     boolean flag=false;

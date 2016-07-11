@@ -26,68 +26,68 @@ import java.io.Serializable;
  */
 public class MoodleWarning implements Serializable {
 
-  private String item=null;
-  private Integer itemid=null;
-  private String warningcode=null;
-  private String message=null;
+	private String item = null;
+	private Integer itemid = null;
+	private String warningcode = null;
+	private String message = null;
 
-  public MoodleWarning() {
-  }
-  
-  public MoodleWarning(String warningcode) {
-    this.warningcode=warningcode;
-  }
+	public MoodleWarning() {
+	}
 
-  public MoodleWarning(String warningcode, String message) {
-    this.warningcode=warningcode;
-    this.message=message;
-  }
-  
-  public void setMoodleWarningField(String nodeName, String content) {
-    if (nodeName.equals("item")) {
-      setItem(content);
-    }
-    if (nodeName.equals("itemid")) {
-      setItemId(Integer.parseInt(content.trim()));
-    }
-    if (nodeName.equals("warningcode")) {
-      setWarningCode(content);
-    }
-    if (nodeName.equals("message")) {
-      setMessage(content);
-    }
-  }
+	public MoodleWarning(String warningcode) {
+		this.warningcode = warningcode;
+	}
 
-  public String getItem() {
-    return item;
-  }
+	public MoodleWarning(String warningcode, String message) {
+		this.warningcode = warningcode;
+		this.message = message;
+	}
 
-  public void setItem(String item) {
-    this.item = item;
-  }
+	public void setMoodleWarningField(String nodeName, String content) {
+		if (nodeName.equals("item")) {
+			setItem(content);
+		}
+		if (nodeName.equals("itemid")) {
+			setItemId(Integer.parseInt(content.trim()));
+		}
+		if (nodeName.equals("warningcode")) {
+			setWarningCode(content);
+		}
+		if (nodeName.equals("message")) {
+			setMessage(content);
+		}
+	}
 
-  public Integer getItemId() {
-    return itemid;
-  }
+	public String getItem() {
+		return item;
+	}
 
-  public void setItemId(Integer itemid) {
-    this.itemid = itemid;
-  }
+	public void setItem(String item) {
+		this.item = item;
+	}
 
-  public String getMessage() {
-    return message;
-  }
+	public Integer getItemId() {
+		return itemid;
+	}
 
-  public void setMessage(String message) {
-    this.message = message;
-  }
+	public void setItemId(Integer itemid) {
+		this.itemid = itemid;
+	}
 
-  public String getWarningCode() {
-    return warningcode;
-  }
+	public String getMessage() {
+		return message;
+	}
 
-  public void setWarningCode(String warningcode) {
-    this.warningcode = warningcode;
-  }
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getWarningCode() {
+		return warningcode;
+	}
+
+	public void setWarningCode(String warningcode) {
+		this.warningcode = warningcode;
+	}
 
 }

@@ -22,22 +22,24 @@ import java.io.InputStream;
 import java.io.Serializable;
 
 /**
- * Path to the Entity file to be injected into the XML stream returned from a webservice.
- * Required as Moodle does not provide these and they are needed for the process of parsing the XML stream.
+ * Path to the Entity file to be injected into the XML stream returned from a
+ * webservice. Required as Moodle does not provide these and they are needed for
+ * the process of parsing the XML stream.
  *
  * @author Bill Antonia (Class only), file downloaded from the Internet.
  */
 public class FindPath implements Serializable {
 
-    /**
-     * Stream resource
-     */
-    protected InputStream resource;
+	/**
+	 * Stream resource
+	 */
+	protected InputStream resource;
 
-    /**
-     * Method to get the XML Entity resource file as a stream
-     */
-    protected FindPath() {
-        resource = this.getClass().getClassLoader().getResourceAsStream("net/beaconhillcott/moodlerest/EntityInjection.xml");
-    }
+	/**
+	 * Method to get the XML Entity resource file as a stream
+	 */
+	protected FindPath() {
+		resource = this.getClass().getClassLoader()
+				.getResourceAsStream("net/beaconhillcott/moodlerest/EntityInjection.xml");
+	}
 }

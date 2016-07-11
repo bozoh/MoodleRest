@@ -24,14 +24,15 @@ package net.beaconhillcott.moodlerest.rest.exception;
  */
 public class MoodleRestWebServiceException extends MoodleRestException {
 
-    MoodleRestWebServiceException() {}
+	public MoodleRestWebServiceException() {
+	}
 
-    MoodleRestWebServiceException(String msg) {
-        super(msg);
-    }
+	public MoodleRestWebServiceException(String msg) {
+		super(msg);
+	}
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
 }

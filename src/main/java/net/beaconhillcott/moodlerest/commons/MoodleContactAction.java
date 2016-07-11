@@ -12,8 +12,6 @@ package net.beaconhillcott.moodlerest.commons;
  */
 
 public enum MoodleContactAction {
-        CREATE,
-        DELETE,
-        BLOCK,
-        UNBLOCK
+	CREATE, DELETE, BLOCK, UNBLOCK
 }
+ 

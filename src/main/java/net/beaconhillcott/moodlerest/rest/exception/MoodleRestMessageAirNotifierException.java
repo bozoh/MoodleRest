@@ -14,11 +14,11 @@ import java.io.Serializable;
  */
 public class MoodleRestMessageAirNotifierException extends MoodleRestException implements Serializable {
 
-  public MoodleRestMessageAirNotifierException() {
-  }
+	public MoodleRestMessageAirNotifierException() {
+	}
 
-  public MoodleRestMessageAirNotifierException(String msg) {
-    super(msg);
-  }
-  
+	public MoodleRestMessageAirNotifierException(String msg) {
+		super(msg);
+	}
+
 }

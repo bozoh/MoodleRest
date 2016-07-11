@@ -22,20 +22,36 @@ import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import net.beaconhillcott.moodlerest.MoodleModAssignSubmissions.Submission;
-import net.beaconhillcott.moodlerest.MoodleModAssignSubmissions.Submission.Plugin;
-import net.beaconhillcott.moodlerest.MoodleModAssignSubmissions.Submission.Plugin.EditorField;
-import net.beaconhillcott.moodlerest.MoodleModAssignSubmissions.Submission.Plugin.FileArea;
-import net.beaconhillcott.moodlerest.MoodleModAssignSubmissions.Submission.Plugin.FileArea.File;
-import net.beaconhillcott.moodlerest.MoodleModAssignGrades.Grade;
-import net.beaconhillcott.moodlerest.MoodleModAssignUserFlags.UserFlags;
-import net.beaconhillcott.moodlerest.MoodleModAssignUserMappings.UserMappings;
+
 import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.DescriptionFormat;
+import net.beaconhillcott.moodlerest.commons.ModAssignGrades;
+import net.beaconhillcott.moodlerest.commons.ModAssignUserFlagResult;
+import net.beaconhillcott.moodlerest.commons.ModAssignUserFlags;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignAssignments;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignGrades;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignGrades.Grade;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignSubmissions;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignSubmissions.Submission;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignSubmissions.Submission.Plugin;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignSubmissions.Submission.Plugin.EditorField;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignSubmissions.Submission.Plugin.FileArea;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignSubmissions.Submission.Plugin.FileArea.File;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignUserFlags;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignUserFlags.UserFlags;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignUserMappings;
+import net.beaconhillcott.moodlerest.commons.MoodleModAssignUserMappings.UserMappings;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestModAssignException;
 
 /**
  *
  * @author root
  */
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class MoodleRestModAssign implements Serializable {
   
   public static MoodleModAssignAssignments[] getAssignments(Long[] courseIds) throws MoodleRestException, UnsupportedEncodingException {

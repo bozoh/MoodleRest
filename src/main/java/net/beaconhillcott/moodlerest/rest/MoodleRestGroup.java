@@ -18,13 +18,25 @@
 
 package net.beaconhillcott.moodlerest.rest;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Vector;
+
 import org.w3c.dom.NodeList;
-import java.io.Serializable;
-import java.util.ArrayList;
+
+import net.beaconhillcott.moodlerest.commons.MoodleGroup;
+import net.beaconhillcott.moodlerest.commons.MoodleGroupGrouping;
+import net.beaconhillcott.moodlerest.commons.MoodleGroupGroupings;
+import net.beaconhillcott.moodlerest.commons.MoodleGroupUser;
+import net.beaconhillcott.moodlerest.commons.MoodleGroups;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.commos.exception.MoodleGroupGroupingsException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestGroupException;
 
 /**
  * <p>Class containing the static routines to manipulate Moodle groups and users within course groups.</p>

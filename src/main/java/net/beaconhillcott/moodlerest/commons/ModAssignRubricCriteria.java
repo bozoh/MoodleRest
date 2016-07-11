@@ -14,36 +14,37 @@ import java.util.ArrayList;
  * @author root
  */
 public class ModAssignRubricCriteria implements Serializable {
-  private Long criterionId=null;
-  private ArrayList<ModAssignRubricFilling> fillings=null;
+	private Long criterionId = null;
+	private ArrayList<ModAssignRubricFilling> fillings = null;
 
-  public ModAssignRubricCriteria() {
-  }
+	public ModAssignRubricCriteria() {
+	}
 
-  public ModAssignRubricCriteria(Long criterionId, ArrayList<ModAssignRubricFilling> fillings) {
-    this.criterionId = criterionId;
-    this.fillings = fillings;
-  }
+	public ModAssignRubricCriteria(Long criterionId, ArrayList<ModAssignRubricFilling> fillings) {
+		this.criterionId = criterionId;
+		this.fillings = fillings;
+	}
 
-  public Long getCriterionId() {
-    return criterionId;
-  }
+	public Long getCriterionId() {
+		return criterionId;
+	}
 
-  public void setCriterionId(Long criterionId) {
-    this.criterionId = criterionId;
-  }
+	public void setCriterionId(Long criterionId) {
+		this.criterionId = criterionId;
+	}
 
-  public ArrayList<ModAssignRubricFilling> getFillings() {
-    return fillings;
-  }
+	public ArrayList<ModAssignRubricFilling> getFillings() {
+		return fillings;
+	}
 
-  public void setFillings(ArrayList<ModAssignRubricFilling> fillings) {
-    this.fillings = fillings;
-  }
-  
-  public void addFilling(ModAssignRubricFilling filling) {
-    if (fillings==null) fillings=new ArrayList<ModAssignRubricFilling>();
-    fillings.add(filling);
-  }
-  
+	public void setFillings(ArrayList<ModAssignRubricFilling> fillings) {
+		this.fillings = fillings;
+	}
+
+	public void addFilling(ModAssignRubricFilling filling) {
+		if (fillings == null)
+			fillings = new ArrayList<ModAssignRubricFilling>();
+		fillings.add(filling);
+	}
+
 }

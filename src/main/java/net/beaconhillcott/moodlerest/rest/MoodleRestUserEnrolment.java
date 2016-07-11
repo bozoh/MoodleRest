@@ -17,14 +17,23 @@
  */
 package net.beaconhillcott.moodlerest.rest;
 
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Hashtable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.w3c.dom.NodeList;
-import java.io.Serializable;
-import java.io.UnsupportedEncodingException;
 
+import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleUserEnrolment;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestUserEnrolmentException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestUserException;
+
+
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class MoodleRestUserEnrolment implements Serializable {
   
   public static void enrolUsers(MoodleUserEnrolment[] users) throws MoodleRestUserEnrolmentException, MoodleRestException {

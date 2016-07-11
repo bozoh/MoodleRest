@@ -18,18 +18,31 @@
 
 package net.beaconhillcott.moodlerest.rest;
 
-import java.io.*;
-import java.net.*;
-import java.util.logging.*;
-import org.w3c.dom.NodeList;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.MoodleListStatus;
+import net.beaconhillcott.moodlerest.commons.MoodleNote;
+import net.beaconhillcott.moodlerest.commons.MoodleNotes;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCourseException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestMessageException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestNotesException;
 
 /**
  * <p>Class containing static Methods to call Moodle REST notes web services.</p>
  * 
  * @author Bill Antonia
  */
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class MoodleRestNotes implements Serializable {
   
   //private static final int BUFFER_MAX=4000;

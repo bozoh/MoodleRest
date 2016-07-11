@@ -7,6 +7,7 @@
 package net.beaconhillcott.moodlerest.commons;
 
 import java.io.Serializable;
+import net.beaconhillcott.moodlerest.commos.exception.MoodleRoleException;
 
 /**
  *
@@ -14,40 +15,33 @@ import java.io.Serializable;
  */
 public enum Role implements Serializable {
 
-  
-  MANAGER(1L),
-  COURSE_CREATOR(2L),
-  TEACHER(3L),
-  NON_EDITING_TEACHER(4L),
-  STUDENT(5L),
-  GUEST(6L),
-  AUTHENTICATED_USER(7L),
-  AUTHENTICATED_USER_ON_FRONT_PAGE(8L);
-  
-  private Role(Long value) {
-    this.value=value;
-  }
+	MANAGER(1L), COURSE_CREATOR(2L), TEACHER(3L), NON_EDITING_TEACHER(4L), STUDENT(5L), GUEST(6L), AUTHENTICATED_USER(
+			7L), AUTHENTICATED_USER_ON_FRONT_PAGE(8L);
 
-  private Long value;
+	private Role(Long value) {
+		this.value = value;
+	}
 
-  public Long toLongValue() {
-    return value.longValue();
-  }
-  
-  public Role toEnum() throws MoodleRoleException {
-    boolean flag=false;
-    Role role=null;
-    for(Role r : Role.values()) {
-      if (r.toLongValue()==value) {
-        role=r;
-        flag=true;
-        break;
-      }
-    }
-    if (!flag) {
-      throw new MoodleRoleException();
-    }
-    return role;
-  }
-  
+	private Long value;
+
+	public Long toLongValue() {
+		return value.longValue();
+	}
+
+	public Role toEnum() throws MoodleRoleException {
+		boolean flag = false;
+		Role role = null;
+		for (Role r : Role.values()) {
+			if (r.toLongValue() == value) {
+				role = r;
+				flag = true;
+				break;
+			}
+		}
+		if (!flag) {
+			throw new MoodleRoleException();
+		}
+		return role;
+	}
+
 }

@@ -12,42 +12,42 @@ import java.io.Serializable;
  * @author root
  */
 public class MoodleUsersWithCapability implements Serializable {
-  
-  private Long courseId=null;
-  private Capability capability=null;
-  private ArrayList<MoodleUser> users=null;
 
-  public MoodleUsersWithCapability() {
-  }
+	private Long courseId = null;
+	private Capability capability = null;
+	private ArrayList<MoodleUser> users = null;
 
-  public MoodleUsersWithCapability(Long courseId, Capability capability, ArrayList<MoodleUser> users) {
-    this.courseId = courseId;
-    this.capability = capability;
-    this.users = users;
-  }
+	public MoodleUsersWithCapability() {
+	}
 
-  public Long getCourseId() {
-    return courseId;
-  }
+	public MoodleUsersWithCapability(Long courseId, Capability capability, ArrayList<MoodleUser> users) {
+		this.courseId = courseId;
+		this.capability = capability;
+		this.users = users;
+	}
 
-  public void setCourseId(Long courseId) {
-    this.courseId = courseId;
-  }
+	public Long getCourseId() {
+		return courseId;
+	}
 
-  public Capability getCapability() {
-    return capability;
-  }
+	public void setCourseId(Long courseId) {
+		this.courseId = courseId;
+	}
 
-  public void setCapability(Capability capability) {
-    this.capability = capability;
-  }
+	public Capability getCapability() {
+		return capability;
+	}
 
-  public ArrayList<MoodleUser> getUsers() {
-    return users;
-  }
+	public void setCapability(Capability capability) {
+		this.capability = capability;
+	}
 
-  public void setUsers(ArrayList<MoodleUser> users) {
-    this.users = users;
-  }
-  
+	public ArrayList<MoodleUser> getUsers() {
+		return users;
+	}
+
+	public void setUsers(ArrayList<MoodleUser> users) {
+		this.users = users;
+	}
+
 }

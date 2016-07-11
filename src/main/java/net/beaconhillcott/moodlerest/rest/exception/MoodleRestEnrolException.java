@@ -18,27 +18,27 @@
 
 package net.beaconhillcott.moodlerest.rest.exception;
 
-
 /**
  *
  * @author Bill Antonia
  */
 public class MoodleRestEnrolException extends MoodleRestException {
 
-    /**
-     *
-     */
-    public static final String NO_LEGACY_CALL="No legacy call";
+	/**
+	 *
+	 */
+	public static final String NO_LEGACY_CALL = "No legacy call";
 
-    MoodleRestEnrolException() {}
+	public MoodleRestEnrolException() {
+	}
 
-    MoodleRestEnrolException(String msg) {
-        super(msg);
-    }
+	public MoodleRestEnrolException(String msg) {
+		super(msg);
+	}
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
-    
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
+
 }

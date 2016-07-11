@@ -14,21 +14,22 @@ import java.util.ArrayList;
  * @author root
  */
 public class MoodleUserLists extends MoodleWarnings implements Serializable {
-  ArrayList<UserList> users=null;
+	ArrayList<UserList> users = null;
 
-  public MoodleUserLists() {
-  }
+	public MoodleUserLists() {
+	}
 
-  public ArrayList<UserList> getUsers() {
-    return users;
-  }
+	public ArrayList<UserList> getUsers() {
+		return users;
+	}
 
-  public void setUsers(ArrayList<UserList> users) {
-    this.users = users;
-  }
-  
-  public void addUserList(UserList user) {
-    if (users==null) users=new ArrayList<UserList>();
-    users.add(user);
-  }
+	public void setUsers(ArrayList<UserList> users) {
+		this.users = users;
+	}
+
+	public void addUserList(UserList user) {
+		if (users == null)
+			users = new ArrayList<UserList>();
+		users.add(user);
+	}
 }

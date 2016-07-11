@@ -9,23 +9,22 @@ package net.beaconhillcott.moodlerest.rest.exception;
  * @author root
  */
 public class MoodleRestUserEnrolmentException extends Exception {
-  
-  public static final String USER_NULL="User cannot be null";
 
-  public MoodleRestUserEnrolmentException(Throwable cause) {
-    super(cause);
-  }
+	public static final String USER_NULL = "User cannot be null";
 
-  public MoodleRestUserEnrolmentException(String message, Throwable cause) {
-    super(message, cause);
-  }
+	public MoodleRestUserEnrolmentException(Throwable cause) {
+		super(cause);
+	}
 
-  public MoodleRestUserEnrolmentException(String message) {
-    super(message);
-  }
+	public MoodleRestUserEnrolmentException(String message, Throwable cause) {
+		super(message, cause);
+	}
 
-  public MoodleRestUserEnrolmentException() {
-  }
-  
-  
+	public MoodleRestUserEnrolmentException(String message) {
+		super(message);
+	}
+
+	public MoodleRestUserEnrolmentException() {
+	}
+
 }

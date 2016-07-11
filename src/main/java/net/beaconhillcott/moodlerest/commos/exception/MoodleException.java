@@ -24,9 +24,9 @@ package net.beaconhillcott.moodlerest.commos.exception;
  */
 public class MoodleException extends Exception {
 
-    MoodleException() {}
+    public MoodleException() {}
 
-    MoodleException(String msg) {
+    public MoodleException(String msg) {
         super(msg);
     }
 

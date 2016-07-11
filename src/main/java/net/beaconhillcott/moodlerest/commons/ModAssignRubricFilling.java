@@ -14,11 +14,11 @@ import java.io.Serializable;
  */
 public class ModAssignRubricFilling extends ModAssignFilling implements Serializable {
 
-  public ModAssignRubricFilling() {
-  }
+	public ModAssignRubricFilling() {
+	}
 
-  public ModAssignRubricFilling(Long criterionId, Long levelId, String remark, DescriptionFormat remarkFormat) {
-    super(criterionId, levelId, remark, remarkFormat);
-  }
-  
+	public ModAssignRubricFilling(Long criterionId, Long levelId, String remark, DescriptionFormat remarkFormat) {
+		super(criterionId, levelId, remark, remarkFormat);
+	}
+
 }

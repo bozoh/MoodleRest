@@ -12,11 +12,11 @@ package net.beaconhillcott.moodlerest.rest.exception;
  */
 public class MoodleRestModDataException extends MoodleRestException {
 
-  public MoodleRestModDataException() {
-  }
+	public MoodleRestModDataException() {
+	}
 
-  public MoodleRestModDataException(String msg) {
-    super(msg);
-  }
-  
+	public MoodleRestModDataException(String msg) {
+		super(msg);
+	}
+
 }

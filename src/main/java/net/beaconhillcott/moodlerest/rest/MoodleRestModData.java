@@ -9,7 +9,15 @@ package net.beaconhillcott.moodlerest.rest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+
 import org.w3c.dom.NodeList;
+
+import net.beaconhillcott.moodlerest.commons.MoodleDatabase;
+import net.beaconhillcott.moodlerest.commons.MoodleDatabases;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleWarning;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestModDataException;
 /**
  *
  * @author Bill Antonia

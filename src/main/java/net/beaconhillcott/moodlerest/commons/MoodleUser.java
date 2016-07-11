@@ -18,8 +18,11 @@
 
 package net.beaconhillcott.moodlerest.commons;
 
-import java.util.ArrayList;
 import java.io.Serializable;
+import java.util.ArrayList;
+
+import net.beaconhillcott.moodlerest.commos.exception.MoodleUserRoleException;
+import net.beaconhillcott.moodlerest.rest.MoodleRestUser;
 
 /**
  * Class to hold the state of a MoodleUser object. Used when creating, updating
@@ -1241,16 +1244,16 @@ public class MoodleUser implements Serializable, Comparable<MoodleUser> {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("MoodleUser [id=").append(id).append(", username=").append(username).append(", password=<THIS IS SECRET>")
-				.append(", firstname=").append(firstname).append(", lastname=").append(lastname)
-				.append(", email=").append(email).append(", auth=").append(auth).append(", idnumber=").append(idnumber)
-				.append(", lang=").append(lang).append(", theme=").append(theme).append(", timezone=").append(timezone)
-				.append(", mailformat=").append(mailformat).append(", description=").append(description)
-				.append(", city=").append(city).append(", country=").append(country).append(", fullname=")
-				.append(fullname).append(", address=").append(address).append(", phone1=").append(phone1)
-				.append(", phone2=").append(phone2).append(", icq=").append(icq).append(", skype=").append(skype)
-				.append(", yahoo=").append(yahoo).append(", msn=").append(msn).append(", aim=").append(aim)
-				.append(", department=").append(department).append(", institution=").append(institution)
+		builder.append("MoodleUser [id=").append(id).append(", username=").append(username)
+				.append(", password=<THIS IS SECRET>").append(", firstname=").append(firstname).append(", lastname=")
+				.append(lastname).append(", email=").append(email).append(", auth=").append(auth).append(", idnumber=")
+				.append(idnumber).append(", lang=").append(lang).append(", theme=").append(theme).append(", timezone=")
+				.append(timezone).append(", mailformat=").append(mailformat).append(", description=")
+				.append(description).append(", city=").append(city).append(", country=").append(country)
+				.append(", fullname=").append(fullname).append(", address=").append(address).append(", phone1=")
+				.append(phone1).append(", phone2=").append(phone2).append(", icq=").append(icq).append(", skype=")
+				.append(skype).append(", yahoo=").append(yahoo).append(", msn=").append(msn).append(", aim=")
+				.append(aim).append(", department=").append(department).append(", institution=").append(institution)
 				.append(", interests=").append(interests).append(", firstaccess=").append(firstaccess)
 				.append(", lastaccess=").append(lastaccess).append(", confirmed=").append(confirmed)
 				.append(", descriptionformat=").append(descriptionformat).append(", url=").append(url)
@@ -1266,7 +1269,6 @@ public class MoodleUser implements Serializable, Comparable<MoodleUser> {
 	/**
 	 * Default comparable
 	 */
-	@Override
 	public int compareTo(MoodleUser o) {
 		return this.id.intValue() - o.getId().intValue();
 	}

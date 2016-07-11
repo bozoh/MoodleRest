@@ -17,14 +17,24 @@
  */
 
 package net.beaconhillcott.moodlerest.rest;
-import java.io.*;
-import java.net.*;
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
+
 import org.w3c.dom.NodeList;
-import java.io.Serializable;
+
+import net.beaconhillcott.moodlerest.commons.CohortMember;
+import net.beaconhillcott.moodlerest.commons.MoodleCohort;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleUser;
+import net.beaconhillcott.moodlerest.commos.exception.MoodleCohortException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCalendarException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestCohortException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
 
 /**
  * 

@@ -13,65 +13,73 @@ import java.io.Serializable;
  * @author Bill Antonia
  */
 public class ModAssignFilling implements Serializable {
-  private Long criterionId=null;
-  private Long levelId=null;
-  private String remark=null;
-  private DescriptionFormat remarkFormat=null;
+	private Long criterionId = null;
+	private Long levelId = null;
+	private String remark = null;
+	private DescriptionFormat remarkFormat = null;
 
-  public ModAssignFilling() {
-  }
+	public ModAssignFilling() {
+	}
 
-  public ModAssignFilling(Long criterionId, Long levelId, String remark, DescriptionFormat remarkFormat) {
-    this.criterionId = criterionId;
-    this.levelId = levelId;
-    this.remark = remark;
-    this.remarkFormat = remarkFormat;
-  }
+	public ModAssignFilling(Long criterionId, Long levelId, String remark, DescriptionFormat remarkFormat) {
+		this.criterionId = criterionId;
+		this.levelId = levelId;
+		this.remark = remark;
+		this.remarkFormat = remarkFormat;
+	}
 
-  public void setField(String name, String value) {
-    if (name.equals("criterionid")) {criterionId=Long.parseLong(value);}
-    if (name.equals("levelid")) {levelId=Long.parseLong(value);}
-    if (name.equals("remark")) {remark=value;}
-    if (name.equals("remarkformat")) { //int   //intro format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN)
-      for (DescriptionFormat key : DescriptionFormat.values()) {
-        if ((""+key.toInt()).equals(value)) {
-          setRemarkFormat(key);
-          break;
-        }
-      }
-    }
-  }
-  
-  public Long getCriterionId() {
-    return criterionId;
-  }
+	public void setField(String name, String value) {
+		if (name.equals("criterionid")) {
+			criterionId = Long.parseLong(value);
+		}
+		if (name.equals("levelid")) {
+			levelId = Long.parseLong(value);
+		}
+		if (name.equals("remark")) {
+			remark = value;
+		}
+		if (name.equals("remarkformat")) { // int //intro format (1 = HTML, 0 =
+											// MOODLE, 2 = PLAIN or 4 =
+											// MARKDOWN)
+			for (DescriptionFormat key : DescriptionFormat.values()) {
+				if (("" + key.toInt()).equals(value)) {
+					setRemarkFormat(key);
+					break;
+				}
+			}
+		}
+	}
 
-  public void setCriterionId(Long criterionId) {
-    this.criterionId = criterionId;
-  }
+	public Long getCriterionId() {
+		return criterionId;
+	}
 
-  public Long getLevelId() {
-    return levelId;
-  }
+	public void setCriterionId(Long criterionId) {
+		this.criterionId = criterionId;
+	}
 
-  public void setLevelId(Long levelId) {
-    this.levelId = levelId;
-  }
+	public Long getLevelId() {
+		return levelId;
+	}
 
-  public String getRemark() {
-    return remark;
-  }
+	public void setLevelId(Long levelId) {
+		this.levelId = levelId;
+	}
 
-  public void setRemark(String remark) {
-    this.remark = remark;
-  }
+	public String getRemark() {
+		return remark;
+	}
 
-  public DescriptionFormat getRemarkFormat() {
-    return remarkFormat;
-  }
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
 
-  public void setRemarkFormat(DescriptionFormat remarkFormat) {
-    this.remarkFormat = remarkFormat;
-  }
-  
+	public DescriptionFormat getRemarkFormat() {
+		return remarkFormat;
+	}
+
+	public void setRemarkFormat(DescriptionFormat remarkFormat) {
+		this.remarkFormat = remarkFormat;
+	}
+
 }

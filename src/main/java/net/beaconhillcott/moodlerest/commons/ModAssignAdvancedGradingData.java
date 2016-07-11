@@ -13,27 +13,27 @@ import java.io.Serializable;
  * @author root
  */
 public class ModAssignAdvancedGradingData implements Serializable {
-  
-  private ModAssignGuide guide=null;
-  private ModAssignRubric rubric=null;
 
-  public ModAssignAdvancedGradingData() {
-  }
+	private ModAssignGuide guide = null;
+	private ModAssignRubric rubric = null;
 
-  public ModAssignGuide getGuide() {
-    return guide;
-  }
+	public ModAssignAdvancedGradingData() {
+	}
 
-  public void setGuide(ModAssignGuide guide) {
-    this.guide = guide;
-  }
+	public ModAssignGuide getGuide() {
+		return guide;
+	}
 
-  public ModAssignRubric getRubric() {
-    return rubric;
-  }
+	public void setGuide(ModAssignGuide guide) {
+		this.guide = guide;
+	}
 
-  public void setRubric(ModAssignRubric rubric) {
-    this.rubric = rubric;
-  }
-  
+	public ModAssignRubric getRubric() {
+		return rubric;
+	}
+
+	public void setRubric(ModAssignRubric rubric) {
+		this.rubric = rubric;
+	}
+
 }

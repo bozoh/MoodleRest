@@ -18,12 +18,19 @@
 
 package net.beaconhillcott.moodlerest.rest;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.w3c.dom.NodeList;
-import java.io.Serializable;
+
+import net.beaconhillcott.moodlerest.commons.Function;
+import net.beaconhillcott.moodlerest.commons.MoodleServices;
+import net.beaconhillcott.moodlerest.commons.MoodleWebService;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestException;
+import net.beaconhillcott.moodlerest.rest.exception.MoodleRestWebServiceException;
 
 /**
  * <p>Class to call the Moodle REST WebServices.</p>

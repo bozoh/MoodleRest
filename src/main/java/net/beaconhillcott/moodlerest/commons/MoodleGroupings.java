@@ -26,55 +26,56 @@ import java.io.Serializable;
  */
 public class MoodleGroupings implements Serializable {
 
-    public static final Long MOODLE=0L;
-    public static final Long HTML=1L;
-    public static final Long PLAIN=2L;
-    public static final Long MARKDOWN=3L;
+	public static final Long MOODLE = 0L;
+	public static final Long HTML = 1L;
+	public static final Long PLAIN = 2L;
+	public static final Long MARKDOWN = 3L;
 
-    private Long courseId=null;
-    private String name=null;
-    private String description=null;
-    private Long descriptionFormat=null;
+	private Long courseId = null;
+	private String name = null;
+	private String description = null;
+	private Long descriptionFormat = null;
 
-    public MoodleGroupings() {}
+	public MoodleGroupings() {
+	}
 
-    public MoodleGroupings(Long courseId, String name, String description) {
-        this.courseId=courseId;
-        this.name=name;
-        this.description=description;
-        descriptionFormat=HTML;
-    }
+	public MoodleGroupings(Long courseId, String name, String description) {
+		this.courseId = courseId;
+		this.name = name;
+		this.description = description;
+		descriptionFormat = HTML;
+	}
 
-    public Long getCourseId() {
-        return courseId;
-    }
+	public Long getCourseId() {
+		return courseId;
+	}
 
-    public void setCourseId(Long courseId) {
-        this.courseId = courseId;
-    }
+	public void setCourseId(Long courseId) {
+		this.courseId = courseId;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public Long getDescriptionFormat() {
-        return descriptionFormat;
-    }
+	public Long getDescriptionFormat() {
+		return descriptionFormat;
+	}
 
-    public void setDescriptionFormat(Long descriptionFormat) {
-        this.descriptionFormat = descriptionFormat;
-    }
+	public void setDescriptionFormat(Long descriptionFormat) {
+		this.descriptionFormat = descriptionFormat;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-    
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }

@@ -10,11 +10,20 @@ package net.beaconhillcott.moodlerest.rest.exception;
  */
 public class MoodleRestGradeException extends Exception {
 
-  public MoodleRestGradeException(String NO_LEGACY) {
-  }
+	public MoodleRestGradeException(String NO_LEGACY) {
+	}
 
-  public MoodleRestGradeException() {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-  }
-  
+	public MoodleRestGradeException() {
+		throw new UnsupportedOperationException("Not supported yet."); // To
+																		// change
+																		// body
+																		// of
+																		// generated
+																		// methods,
+																		// choose
+																		// Tools
+																		// |
+																		// Templates.
+	}
+
 }

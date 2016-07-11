@@ -14,87 +14,88 @@ import java.util.ArrayList;
  * @author root
  */
 public class MoodleModAssignUserMappings implements Serializable {
-  private Long assignmentId=null;
-  private ArrayList<UserMappings> userMappings=null;
+	private Long assignmentId = null;
+	private ArrayList<UserMappings> userMappings = null;
 
-  public MoodleModAssignUserMappings() {
-    userMappings=new ArrayList<UserMappings>();
-  }
-  
-  public MoodleModAssignUserMappings(Long assignmentId) {
-    this.assignmentId=assignmentId;
-    userMappings=new ArrayList<UserMappings>();
-  }
+	public MoodleModAssignUserMappings() {
+		userMappings = new ArrayList<UserMappings>();
+	}
 
-  public Long getAssignmentId() {
-    return assignmentId;
-  }
+	public MoodleModAssignUserMappings(Long assignmentId) {
+		this.assignmentId = assignmentId;
+		userMappings = new ArrayList<UserMappings>();
+	}
 
-  public void setAssignmentId(Long assignmentId) {
-    this.assignmentId = assignmentId;
-  }
+	public Long getAssignmentId() {
+		return assignmentId;
+	}
 
-  public ArrayList<UserMappings> getUserMappings() {
-    return userMappings;
-  }
+	public void setAssignmentId(Long assignmentId) {
+		this.assignmentId = assignmentId;
+	}
 
-  public void setUserMappings(ArrayList<UserMappings> userMappings) {
-    this.userMappings = userMappings;
-  }
-  
-  public UserMappings newUserMappings() {
-    UserMappings userMapping=new UserMappings();
-    userMappings.add(userMapping);
-    return userMapping;
-  }
-  
-  public UserMappings newUserMappings(Long id) {
-    UserMappings userMapping=new UserMappings(id);
-    userMappings.add(userMapping);
-    return userMapping;
-  }
-  
-  public class UserMappings {
-    private Long id=null;
-    private Long userId=null;
+	public ArrayList<UserMappings> getUserMappings() {
+		return userMappings;
+	}
 
-    public UserMappings() {}
+	public void setUserMappings(ArrayList<UserMappings> userMappings) {
+		this.userMappings = userMappings;
+	}
 
-    public UserMappings(Long id) {
-      this.id=id;
-    }
-    
-    public void setFieldValue(String name, String value) {
-      if (value!=null) {
-        if (!value.isEmpty()) {
-          if (name.equals("id") || name.equals("userid")) {
-            if (name.equals("id")) {
-              setId(Long.parseLong(value));
-            } else {
-              if (name.equals("userid")) {
-                setUserId(Long.parseLong(value));
-              }
-            }
-          }
-        }
-      }
-    }
+	public UserMappings newUserMappings() {
+		UserMappings userMapping = new UserMappings();
+		userMappings.add(userMapping);
+		return userMapping;
+	}
 
-    public Long getId() {
-      return id;
-    }
+	public UserMappings newUserMappings(Long id) {
+		UserMappings userMapping = new UserMappings(id);
+		userMappings.add(userMapping);
+		return userMapping;
+	}
 
-    public void setId(Long id) {
-      this.id = id;
-    }
+	public class UserMappings {
+		private Long id = null;
+		private Long userId = null;
 
-    public Long getUserId() {
-      return userId;
-    }
+		public UserMappings() {
+		}
 
-    public void setUserId(Long userId) {
-      this.userId = userId;
-    }
-    
-  }
+		public UserMappings(Long id) {
+			this.id = id;
+		}
+
+		public void setFieldValue(String name, String value) {
+			if (value != null) {
+				if (!value.isEmpty()) {
+					if (name.equals("id") || name.equals("userid")) {
+						if (name.equals("id")) {
+							setId(Long.parseLong(value));
+						} else {
+							if (name.equals("userid")) {
+								setUserId(Long.parseLong(value));
+							}
+						}
+					}
+				}
+			}
+		}
+
+		public Long getId() {
+			return id;
+		}
+
+		public void setId(Long id) {
+			this.id = id;
+		}
+
+		public Long getUserId() {
+			return userId;
+		}
+
+		public void setUserId(Long userId) {
+			this.userId = userId;
+		}
+
+	}
 }

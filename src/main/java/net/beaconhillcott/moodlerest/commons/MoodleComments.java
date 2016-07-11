@@ -15,39 +15,39 @@ import java.util.ArrayList;
  */
 public class MoodleComments implements Serializable {
 
-  private ArrayList<MoodleComment> comments=null;
-  private ArrayList<MoodleWarning> warnings=null;
-  
-  public MoodleComments() {
-  }
+	private ArrayList<MoodleComment> comments = null;
+	private ArrayList<MoodleWarning> warnings = null;
 
-  public ArrayList<MoodleComment> getComments() {
-    return comments;
-  }
+	public MoodleComments() {
+	}
 
-  public void setComments(ArrayList<MoodleComment> comments) {
-    this.comments = comments;
-  }
+	public ArrayList<MoodleComment> getComments() {
+		return comments;
+	}
 
-  public ArrayList<MoodleWarning> getWarnings() {
-    return warnings;
-  }
+	public void setComments(ArrayList<MoodleComment> comments) {
+		this.comments = comments;
+	}
 
-  public void setWarnings(ArrayList<MoodleWarning> warnings) {
-    this.warnings = warnings;
-  }
-  
-  public void addComment(MoodleComment comment) {
-    if (comments==null) {
-      comments=new ArrayList<MoodleComment>();
-    }
-    comments.add(comment);
-  }
-  
-  public void addWarning(MoodleWarning warning) {
-    if (warnings==null) {
-      warnings=new ArrayList<MoodleWarning>();
-    }
-    warnings.add(warning);
-  }
+	public ArrayList<MoodleWarning> getWarnings() {
+		return warnings;
+	}
+
+	public void setWarnings(ArrayList<MoodleWarning> warnings) {
+		this.warnings = warnings;
+	}
+
+	public void addComment(MoodleComment comment) {
+		if (comments == null) {
+			comments = new ArrayList<MoodleComment>();
+		}
+		comments.add(comment);
+	}
+
+	public void addWarning(MoodleWarning warning) {
+		if (warnings == null) {
+			warnings = new ArrayList<MoodleWarning>();
+		}
+		warnings.add(warning);
+	}
 }

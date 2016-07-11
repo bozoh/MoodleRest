@@ -24,14 +24,15 @@ package net.beaconhillcott.moodlerest.rest.exception;
  */
 public class MoodleRestModAssignException extends MoodleRestException {
 
-    MoodleRestModAssignException() {}
+	public MoodleRestModAssignException() {
+	}
 
-    MoodleRestModAssignException(String msg) {
-        super(msg);
-    }
+	public MoodleRestModAssignException(String msg) {
+		super(msg);
+	}
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
 }
